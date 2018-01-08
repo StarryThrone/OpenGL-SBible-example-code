@@ -10,13 +10,21 @@
 #import "GLCoreProfileView.h"
 #import <OpenGL/OpenGL.h>
 #import <GLKit/GLKit.h>
+#import "TDModelManger.h"
+#import "TextureManager.h"
 
-@interface GLCoreProfileView()
+@interface GLCoreProfileView() {
+@protected
+    GLuint subroutines[2];
+}
+
 @property (atomic, strong) NSTimer *lifeTimer;
 @property (atomic, assign) CGFloat lifeDuration;
 
 @property (atomic, assign) GLuint program;
 @property (atomic, assign) GLuint vertexArray;
+
+@property (atomic, assign) GLint subrotineLoc;
 @end
 
 @implementation GLCoreProfileView
@@ -35,7 +43,6 @@
     if (self = [super initWithCoder:decoder]) {
         [self setOpenGLContext:openGLContext];
         [self.openGLContext makeCurrentContext];
-        
         _lifeTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(lifeTimerUpdate) userInfo:nil repeats:YES];
     }
     return self;
@@ -54,7 +61,6 @@
     NSLog(@"Renderer: %s", glGetString(GL_RENDERER));
     NSLog(@"Vendor: %s", glGetString(GL_VENDOR));
     NSLog(@"GLSL Version: %s", glGetString(GL_SHADING_LANGUAGE_VERSION));
-    
     [self loadShaders];
     glGenVertexArrays(1, &_vertexArray);
     glBindVertexArray(_vertexArray);
@@ -66,16 +72,12 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-    const GLfloat color[] = { 0.3, 0.3,
-        0.3f, 1.0f };
-    glClearBufferfv(GL_COLOR, 0, color);
+    static const GLfloat green[] = { 0.0f, 0.1f, 0.0f, 1.0f };
+    glClearBufferfv(GL_COLOR, 0, green);
     glUseProgram(_program);
-    GLfloat attrib[] = { (float)sin(_lifeDuration) * 0.5f,
-        (float)cos(_lifeDuration) * 0.6f,
-        0.0f, 0.0f };
-    glVertexAttrib4fv(0, attrib);
-    
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    int i = (int)_lifeDuration;
+    glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &subroutines[i & 1]);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     glFlush();
 }
 
@@ -120,6 +122,10 @@
         }
         return NO;
     }
+    
+    subroutines[0] = glGetSubroutineIndex(_program, GL_FRAGMENT_SHADER, "myFunction1");
+    subroutines[1] = glGetSubroutineIndex(_program, GL_FRAGMENT_SHADER, "myFunction2");
+    _subrotineLoc = glGetUniformLocation(_program, "mySubroutineUniform");
     return YES;
 }
 
@@ -140,7 +146,6 @@
         fprintf(stderr, "Info Log: %s\n", infoLog);
         
         glDeleteShader(*shader);
-        free(infoLog);
         return NO;
     }
     return YES;
@@ -164,6 +169,7 @@
 #pragma mark - listening methods
 - (void)lifeTimerUpdate {
     _lifeDuration += _lifeTimer.timeInterval;
+    // _lifeDuration为程序运行时间
     [self drawRect:self.bounds];
 }
 
