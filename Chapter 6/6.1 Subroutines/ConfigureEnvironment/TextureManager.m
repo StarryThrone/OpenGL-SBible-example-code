@@ -140,9 +140,11 @@ static unsigned int calculate_face_size(const header *h) {
     }
     
     switch (target) {
+            //0x0DE0    3552
         case GL_TEXTURE_1D:
             glTexImage1D(GL_TEXTURE_1D, h.miplevels, h.glinternalformat, h.pixelwidth, 0, h.glformat, h.gltype, data);
             break;
+            //0x0DE1    3553
         case GL_TEXTURE_2D: {
             unsigned char *ptr = data;
             int height = h.pixelheight;
@@ -163,15 +165,19 @@ static unsigned int calculate_face_size(const header *h) {
             }
         }
             break;
+            //0x806F    32879
         case GL_TEXTURE_3D:
             glTexImage3D(GL_TEXTURE_3D, h.miplevels, h.glinternalformat, h.pixelwidth, h.pixelheight, h.pixeldepth, 0, h.glformat, h.gltype, data);
             break;
+            //0x8C18    35864
         case GL_TEXTURE_1D_ARRAY:
             glTexImage2D(GL_TEXTURE_1D_ARRAY, h.miplevels, h.glinternalformat, h.pixelwidth, h.arrayelements, 0, h.glformat, h.gltype, data);
             break;
+            //0x8C1A    35866
         case GL_TEXTURE_2D_ARRAY:
             glTexImage3D(GL_TEXTURE_2D_ARRAY, 0, h.glinternalformat, h.pixelwidth, h.pixelheight, h.arrayelements, 0, h.glformat, h.gltype, data);
             break;
+            //0x8513    34067
         case GL_TEXTURE_CUBE_MAP: {
             unsigned int face_size = calculate_face_size(&h);
             for (int i = 0; i < h.faces; i++) {
@@ -179,6 +185,7 @@ static unsigned int calculate_face_size(const header *h) {
             }
         }
             break;
+            //0x9009    36873
         case GL_TEXTURE_CUBE_MAP_ARRAY:
             glTexImage3D(GL_TEXTURE_CUBE_MAP_ARRAY, h.miplevels, h.glinternalformat, h.pixelwidth, h.pixelheight, h.arrayelements, 0, h.glformat, h.gltype, data);
             break;
