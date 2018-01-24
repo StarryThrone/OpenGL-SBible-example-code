@@ -86,4 +86,12 @@ void main() {
     // 此处没有颜色纹理，因此使用随机色
     // color = texture(orientation_texture, texcoord);
     // color = texture(grasspalette_texture, texture(grasscolor_texture, texcoord).r) + vec4(random_vector(gl_InstanceID).xyz * vec3(0.1, 0.5, 0.1), 1.0);
+    
+//    float tempLength = texture(length_texture, vec2(0.5, 0.5)).r;
+//    float tempOrien = texture(orientation_texture, vec2(0.5, 0.5)).r;
+//    float tempColor = texture(grasscolor_texture, vec2(0.5, 0.5)).r;
+//    float tempBend = texture(bend_texture, vec2(0.5, 0.5)).r;
+//
+//    float colorTemp = tempBend;
+//    color = vec4(colorTemp, colorTemp, colorTemp, 1.0);
 }

@@ -95,17 +95,13 @@
     
     glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, NULL);
     glEnableVertexAttribArray(GLKVertexAttribPosition);
-    
-    [[TextureManager shareManager] loadObjectWithFileName:@"grass_length.ktx" toTextureID:&_lengthTxtureID];
-    [[TextureManager shareManager] loadObjectWithFileName:@"grass_orientation.ktx" toTextureID:&_orientationTxtureID];
-    [[TextureManager shareManager] loadObjectWithFileName:@"grass_color.ktx" toTextureID:&_colorTxtureID];
-    [[TextureManager shareManager] loadObjectWithFileName:@"grass_bend.ktx" toTextureID:&_bendTxtureID];
-    
+
+    GLenum texturePoint[] = {GL_TEXTURE1, GL_TEXTURE2, GL_TEXTURE3, GL_TEXTURE4};
+    NSArray *textureFileNames = @[@"grass_length.ktx", @"grass_orientation.ktx", @"grass_color.ktx" ,@"grass_bend.ktx"];
     GLuint textures[] = {_lengthTxtureID, _orientationTxtureID, _colorTxtureID, _bendTxtureID};
     for (int i = 0; i < 4; i++) {
-        glBindTexture(GL_TEXTURE_2D, textures[i]);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        glActiveTexture(texturePoint[i]);
+        [[TextureManager shareManager] loadObjectWithFileName:textureFileNames[i] toTextureID:&textures[i]];
     }
     
     glEnable(GL_DEPTH_TEST);
@@ -137,18 +133,10 @@
     glUseProgram(_program);
     glUniformMatrix4fv(_mvp_location, 1, GL_FALSE, _mvp_Matrix.m);
     
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, _lengthTxtureID);
     glUniform1i(_lengthTextureLoc, 1);
-    glActiveTexture(GL_TEXTURE2);
-    glBindTexture(GL_TEXTURE_2D, _orientationTxtureID);
     glUniform1i(_orientationTextureLoc, 2);
-    glActiveTexture(GL_TEXTURE3);
-    glBindTexture(GL_TEXTURE_2D, _colorTxtureID);
     glUniform1i(_colorTextureLoc, 3);
-    glActiveTexture(GL_TEXTURE4);
-    glBindTexture(GL_TEXTURE_2D, _colorTxtureID);
-    glUniform1i(_colorTextureLoc, 4);
+    glUniform1i(_bendTextureLoc, 4);
     
     glBindVertexArray(_vertexArray);
     glDrawArraysInstanced(GL_TRIANGLE_STRIP, 0, 6, 1024*1024);
@@ -201,10 +189,10 @@
     }
 
     _mvp_location = glGetUniformLocation(_program, "mvpMatrix");
-    _colorTextureLoc = glGetUniformLocation(_program, "");
-    _bendTextureLoc = glGetUniformLocation(_program, "");
-    _orientationTextureLoc = glGetUniformLocation(_program, "");
-    _lengthTextureLoc = glGetUniformLocation(_program, "");
+    _colorTextureLoc = glGetUniformLocation(_program, "grasscolor_texture");
+    _bendTextureLoc = glGetUniformLocation(_program, "bend_texture");
+    _orientationTextureLoc = glGetUniformLocation(_program, "orientation_texture");
+    _lengthTextureLoc = glGetUniformLocation(_program, "length_texture");
     return YES;
 }
 
