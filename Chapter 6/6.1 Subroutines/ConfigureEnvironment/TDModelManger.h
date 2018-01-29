@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <OpenGL/OpenGL.h>
+#import <GLKit/GLKit.h>
 
 #define SB6M_FOURCC(a,b,c,d)            ( ((unsigned int)(a) << 0) | ((unsigned int)(b) << 8) | ((unsigned int)(c) << 16) | ((unsigned int)(d) << 24) )
 
@@ -90,8 +92,12 @@ typedef struct SB6M_CHUNK_SUB_OBJECT_LIST_t {
 
 @interface TDModelManger : NSObject
 
+@property (nonatomic, assign, readonly) GLuint vao;
+@property (nonatomic, assign, readonly) NSInteger num_sub_objects;
+
 + (instancetype)shareManager;
 - (void)loadObjectWithFileName:(NSString *)name;
 - (void)render;
+- (void)getSubObjectInfoWithIndex:(NSUInteger)index first:(GLuint *)first count:(GLuint *)count;
 
 @end

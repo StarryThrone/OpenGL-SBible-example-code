@@ -8,19 +8,16 @@
 
 #import "TDModelManger.h"
 #import <stdio.h>
-#import <OpenGL/OpenGL.h>
-#import <GLKit/GLKit.h>
 
 #define MAX_SUB_OBJECTS 256
 
 @interface TDModelManger()
-@property (nonatomic, assign) GLuint vao;
+
 @property (nonatomic, assign) GLuint vertex_buffer;
 @property (nonatomic, assign) GLuint index_buffer;
 @property (nonatomic, assign) GLuint num_indices;
 @property (nonatomic, assign) GLuint index_type;
 
-@property (nonatomic, assign) int num_sub_objects;
 
 @property (nonatomic, strong) NSArray *sub_object;
 @end
@@ -166,6 +163,19 @@
                               object_decl.first,
                               object_decl.count,
                               1);
+    }
+}
+
+- (void)getSubObjectInfoWithIndex:(NSUInteger)index first:(GLuint *)first count:(GLuint *)count {
+    if (index >= _num_sub_objects) {
+        *first = 0;
+        *count = 0;
+    } else {
+        NSValue *subObjectValue = _sub_object[index];
+        SB6M_SUB_OBJECT_DECL subObject;
+        [subObjectValue getValue:&subObject];
+        *first = subObject.first;
+        *count = subObject.count;
     }
 }
 @end
