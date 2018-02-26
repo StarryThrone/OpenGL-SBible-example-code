@@ -75,9 +75,13 @@ typedef NS_ENUM(NSUInteger, BUFFER_TYPE_t) {
     };
     NSOpenGLPixelFormat *pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:pixelFormatAttributes];
     NSOpenGLContext *openGLContext = [[NSOpenGLContext alloc] initWithFormat:pixelFormat shareContext:nil];
+    
+    
     if (self = [super initWithCoder:decoder]) {
         [self setOpenGLContext:openGLContext];
         [self.openGLContext makeCurrentContext];
+        GLint sync = 1;
+        CGLSetParameter(CGLGetCurrentContext(), kCGLCPSwapInterval, &sync);
         
         _lifeTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(lifeTimerUpdate) userInfo:nil repeats:YES];
         _iterationPerFrame = 16;
@@ -92,9 +96,12 @@ typedef NS_ENUM(NSUInteger, BUFFER_TYPE_t) {
     [_lifeTimer invalidate];
     _lifeTimer = nil;
     
-//    glDeleteVertexArrays(1, &_vertexArray);
-//    glDeleteProgram(_program);
-//    glDeleteBuffers(1, &_vertexArrayBuffer);
+    glDeleteVertexArrays(2, vertexArray);
+    glDeleteProgram(_updateProgram);
+    glDeleteProgram(_renderProgram);
+    glDeleteBuffers(5, vertexArrayBuffer);
+    glDeleteBuffers(1, &_indexBuffer);
+    glDeleteTextures(2, positionTbo);
 }
 
 - (void)prepareOpenGL {
