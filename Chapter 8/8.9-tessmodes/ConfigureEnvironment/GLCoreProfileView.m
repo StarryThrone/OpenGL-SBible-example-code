@@ -12,17 +12,14 @@
 #import "TextureManager.h"
 #import "TDModelManger.h"
 
-@interface GLCoreProfileView() 
+@interface GLCoreProfileView() {
+@private
+    GLuint programs[4];
+}
 
 @property (nonatomic, strong) NSTimer *lifeTimer;
 @property (nonatomic, assign) CGFloat lifeDuration;
 @property (nonatomic, assign) BOOL paused;
-
-@property (nonatomic, assign) GLuint program;
-@property (nonatomic, assign) GLint projMatrixLoc;
-@property (nonatomic, assign) GLint mvMatrixLoc;
-@property (nonatomic, assign) GLint clipPlanLoc;
-@property (nonatomic, assign) GLint clipSphereLoc;
 
 @property (atomic, assign) GLuint vertexArray;
 
@@ -59,7 +56,9 @@
     [_lifeTimer invalidate];
     _lifeTimer = nil;
     
-    glDeleteProgram(_program);
+    for (int i = 0; i < 4 ; i++) {
+        glDeleteProgram(programs[i]);
+    }
     glDeleteVertexArrays(1, &_vertexArray);
 }
 
@@ -70,13 +69,10 @@
     NSLog(@"GLSL Version: %s", glGetString(GL_SHADING_LANGUAGE_VERSION));
     
     [self loadShaders];
-    
-    [[TDModelManger shareManager] loadObjectWithFileName:@"dragon.sbm"];
-
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CLIP_DISTANCE0);
-    glEnable(GL_CLIP_DISTANCE1);
-    
+    glGenVertexArrays(1, &_vertexArray);
+    glBindVertexArray(_vertexArray);
+    glPatchParameteri(GL_PATCH_VERTICES, 4);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
 - (void)reshape {
@@ -85,45 +81,11 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-    static const GLfloat black[] = { 0.0f, 0.0f, 0.0f, 0.0f};
-    static const GLfloat one = 1.0f;
+    static const GLfloat black[] = {0.0f, 0.0f, 0.0f, 1.0f};
     glClearBufferfv(GL_COLOR, 0, black);
-    glClearBufferfv(GL_DEPTH, 0, &one);
-    
-    static double last_time = 0.0;
-    static double total_time = 0.0;
-    if (!_paused) {
-        total_time += (_lifeDuration - last_time);
-    }
-    last_time = _lifeDuration;
-    float f = (float)total_time;
+    glUseProgram(programs[2]);
+    glDrawArrays(GL_PATCHES, 0, 4);
 
-    glUseProgram(_program);
-    NSRect bounds = [self bounds];
-    GLKMatrix4 proj_matrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(50.0f), NSWidth(bounds)/NSHeight((bounds)), 0.1f, 1000.0f);
-    GLKMatrix4 translateM = GLKMatrix4MakeTranslation(0.0f, -4.0f, 0.0f);
-    GLKMatrix4 rotateM = GLKMatrix4MakeRotation(f*0.34f, 0.0f, 1.0f, 0.0f);
-    GLKMatrix4 translateM2 = GLKMatrix4MakeTranslation(0.0f, 0.0f, -15.0f);
-    GLKMatrix4 mv_matrix = GLKMatrix4Multiply(translateM2, GLKMatrix4Multiply(rotateM, translateM));
-
-    GLKMatrix4 rotateA = GLKMatrix4MakeRotation(f*7.3f, 0.0f, 1.0f, 0.0f);
-    GLKMatrix4 rotateB = GLKMatrix4MakeRotation(f*6.0f, 1.0f, 0.0f, 0.0f);
-    GLKMatrix4 plane_matrix = GLKMatrix4Multiply(rotateB, rotateA);
-
-    GLKVector4 plane = GLKVector4Make(plane_matrix.m00, plane_matrix.m01, plane_matrix.m02, plane_matrix.m03);
-    plane.z = 0.0f;
-    plane = GLKVector4Normalize(plane);
-
-    GLKVector4 clip_sphere = GLKVector4Make(sinf(f * 0.7f) * 3.0f, cosf(f * 1.9f) * 3.0f, sinf(f * 0.1f) * 3.0f, cosf(f * 1.7f) + 2.5f);
-
-    glUniformMatrix4fv(_projMatrixLoc, 1, GL_FALSE, proj_matrix.m);
-    glUniformMatrix4fv(_mvMatrixLoc, 1, GL_FALSE, mv_matrix.m);
-    glUniform4fv(_clipPlanLoc, 1, plane.v);
-    glUniform4fv(_clipSphereLoc, 1, clip_sphere.v);
-
-    [[TDModelManger shareManager] render];
-    glDrawArrays(GL_TRIANGLES, 0, 3);
-    
     glFlush();
 }
 
@@ -131,46 +93,73 @@
 
 #pragma mark - private methods
 - (BOOL)loadShaders {
-    GLuint vertexShader;
-    GLuint fragShader;
-    NSString *verShaderPathName;
-    NSString *fraShaderPathName;
+    NSString *verShaderPathName = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];;
     
-    _program = glCreateProgram();
-    verShaderPathName = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
-    if (![self compileShader:&vertexShader type:GL_VERTEX_SHADER filePath:verShaderPathName]) {
-        NSLog(@"Failed to compile vertex shader");
+    NSArray *tShaderNames = @[@"ShaderQuad", @"ShaderTri", @"ShaderLine"];
+    NSMutableArray *tcShaderPathesTemp = [[NSMutableArray alloc] initWithCapacity:5];
+    NSMutableArray *teShaderPathesTemp = [[NSMutableArray alloc] initWithCapacity:5];
+    for (NSString *tcShaderName in tShaderNames) {
+        NSString *tcShaderPath = [[NSBundle mainBundle] pathForResource:tcShaderName ofType:@"tcsh"];
+        NSString *teShaderPath = [[NSBundle mainBundle] pathForResource:tcShaderName ofType:@"tesh"];
+        [tcShaderPathesTemp addObject:tcShaderPath];
+        [teShaderPathesTemp addObject:teShaderPath];
     }
-    fraShaderPathName = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
-    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER filePath:fraShaderPathName]) {
-        NSLog(@"Failed to compile fragment shader");
-    }
+    NSArray *tcShaderPathes = tcShaderPathesTemp.copy;
+    NSArray *teShaderPathes = teShaderPathesTemp.copy;
     
-    glAttachShader(_program, vertexShader);
-    glAttachShader(_program, fragShader);
+    NSString *fragShaderPathName = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];;
+    
+    GLuint vertexShader = 0, tcShader = 0, teShader = 0, fragShader = 0;
+
+    for (int i = 0; i < tShaderNames.count; i++) {
+        programs[i] = glCreateProgram();
+        if (![self compileShader:&vertexShader type:GL_VERTEX_SHADER filePath:verShaderPathName]) {
+            NSLog(@"Failed to compile vertex shader");
+        }
+        
+        if (![self compileShader:&tcShader type:GL_TESS_CONTROL_SHADER filePath:tcShaderPathes[i]]) {
+            NSLog(@"Failed to compile vertex shader");
+        }
+        
+        if (![self compileShader:&teShader type:GL_TESS_EVALUATION_SHADER filePath:teShaderPathes[i]]) {
+            NSLog(@"Failed to compile vertex shader");
+        }
+        
+        if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER filePath:fragShaderPathName]) {
+            NSLog(@"Failed to compile vertex shader");
+        }
+        
+        glAttachShader(programs[i], vertexShader);
+        glAttachShader(programs[i], tcShader);
+        glAttachShader(programs[i], teShader);
+        glAttachShader(programs[i], fragShader);
+        
+        if (![self linkProgram:programs[i]]) {
+            NSLog(@"Failed to link program: %d", programs[i]);
+            if (programs[i] != 0) {
+                glDeleteProgram(programs[i]);
+                programs[i] = 0;
+            }
+            return NO;
+        }
+    }
     
     if (vertexShader != 0) {
         glDeleteShader(vertexShader);
+        vertexShader = 0;
+    }
+    if (tcShader != 0) {
+        glDeleteShader(tcShader);
+        vertexShader = 0;
+    }
+    if (teShader != 0) {
+        glDeleteShader(teShader);
         vertexShader = 0;
     }
     if (fragShader != 0) {
         glDeleteShader(fragShader);
         fragShader = 0;
     }
-    
-    if (![self linkProgram:_program]) {
-        NSLog(@"Failed to link program: %d", _program);
-        if (_program != 0) {
-            glDeleteProgram(_program);
-            _program = 0;
-        }
-        return NO;
-    }
-    
-    _mvMatrixLoc = glGetUniformLocation(_program, "mv_matrix");
-    _projMatrixLoc = glGetUniformLocation(_program, "proj_matrix");
-    _clipPlanLoc = glGetUniformLocation(_program, "clip_plane");
-    _clipSphereLoc = glGetUniformLocation(_program, "clip_sphere");
     return YES;
 }
 
