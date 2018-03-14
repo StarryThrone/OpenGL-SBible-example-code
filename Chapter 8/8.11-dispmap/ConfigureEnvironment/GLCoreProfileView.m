@@ -23,10 +23,6 @@ typedef struct UNIFORMS_S {
 } UNIFORMS;
 
 @interface GLCoreProfileView()
-//{
-//@private
-//    UNIFORMS uniforms;
-//}
 
 @property (nonatomic, strong) NSTimer *lifeTimer;
 @property (nonatomic, assign) CGFloat lifeDuration;
@@ -105,8 +101,10 @@ typedef struct UNIFORMS_S {
     [_lifeTimer invalidate];
     _lifeTimer = nil;
     
-
+    glDeleteTextures(1, &_displacementTex);
+    glDeleteTextures(1, &_colorTex);
     glDeleteVertexArrays(1, &_vertexArray);
+    glDeleteProgram(_program);
 }
 
 - (void)prepareOpenGL {

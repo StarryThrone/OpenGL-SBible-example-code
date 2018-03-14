@@ -99,5 +99,6 @@ typedef struct SB6M_CHUNK_SUB_OBJECT_LIST_t {
 - (void)loadObjectWithFileName:(NSString *)name;
 - (void)render;
 - (void)getSubObjectInfoWithIndex:(NSUInteger)index first:(GLuint *)first count:(GLuint *)count;
+- (void)free;
 
 @end
