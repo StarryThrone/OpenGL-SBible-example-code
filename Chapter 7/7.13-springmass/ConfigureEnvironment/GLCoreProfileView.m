@@ -208,7 +208,7 @@ typedef NS_ENUM(NSUInteger, BUFFER_TYPE_t) {
     glUseProgram(_updateProgram);
     glEnable(GL_RASTERIZER_DISCARD);
     for (NSInteger i = _iterationPerFrame; i != 0; i--) {
-        glBindVertexArray(vertexArrayBuffer[_iterationIndex & 1]);
+        glBindVertexArray(vertexArray[_iterationIndex & 1]);
         glBindTexture(GL_TEXTURE_BUFFER, positionTbo[_iterationIndex & 1]);
         glUniform1i(_textureVertextLoc, 0);
         // 此处对索引+1包装转换反馈用的是另一组缓存来存储数据
