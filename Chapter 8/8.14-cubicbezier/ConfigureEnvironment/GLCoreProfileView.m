@@ -70,7 +70,7 @@ typedef struct UNIFORMS_S {
         
         _showPoints = YES;
         _showCage = YES;
-        _enableWireFrame = NO;
+        _enableWireFrame = YES;
         
         __weak __typeof(self) weakself = self;
         [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^NSEvent * _Nullable(NSEvent * _Nonnull aEvent) {

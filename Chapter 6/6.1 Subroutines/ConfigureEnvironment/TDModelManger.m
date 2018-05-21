@@ -57,8 +57,10 @@
     SB6M_CHUNK_INDEX_DATA *index_data_chunk = NULL;
     SB6M_CHUNK_SUB_OBJECT_LIST *sub_object_chunk = NULL;
     
+    NSLog(@"==============Model detect started....==============");
     for (int i = 0; i < header->num_chunks; i++) {
         SB6M_CHUNK_HEADER *chunk = (SB6M_CHUNK_HEADER *)ptr;
+        NSLog(@"data lock name: %s, block size %d", chunk->chunk_name, chunk->size);
         ptr += chunk->size;
         switch (chunk->chunk_type) {
             case SB6M_CHUNK_TYPE_VERTEX_ATTRIBS:
@@ -77,6 +79,12 @@
                 break;
         }
     }
+    NSLog(@"vertex attribte count: %d", vertex_attrib_chunk->attrib_count);
+    for (int i = 0; i < vertex_attrib_chunk->attrib_count; i++) {
+        SB6M_VERTEX_ATTRIB_DECL *attribDel = vertex_attrib_chunk->attrib_data;
+        NSLog(@"vertex attribte name:%s", attribDel->name);
+    }
+    NSLog(@"==============Model detect finished....==============");
     
     if (sub_object_chunk != NULL) {
         if (sub_object_chunk->count > MAX_SUB_OBJECTS) {

@@ -1,5 +1,5 @@
 #version 410 core
-
+// 纹理坐标
 out VS_OUT {
     vec2 tc;
 } vs_out;

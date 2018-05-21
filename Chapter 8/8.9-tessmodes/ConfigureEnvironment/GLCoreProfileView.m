@@ -83,7 +83,7 @@
 - (void)drawRect:(NSRect)dirtyRect {
     static const GLfloat black[] = {0.0f, 0.0f, 0.0f, 1.0f};
     glClearBufferfv(GL_COLOR, 0, black);
-    glUseProgram(programs[2]);
+    glUseProgram(programs[0]);
     glDrawArrays(GL_PATCHES, 0, 4);
 
     glFlush();
