@@ -150,9 +150,9 @@ typedef NS_ENUM(NSUInteger, BUFFER_TYPE_t) {
     glGenBuffers(5, vertexArrayBuffer);
     
     for (int i = 0; i < 2; i++) {
-        glBindVertexArray(vertexArray[i]);
         glBindBuffer(GL_ARRAY_BUFFER, vertexArrayBuffer[POSITION_A + i]);
         glBufferData(GL_ARRAY_BUFFER, POINTS_TOTAL * sizeof(GLKVector4), initialPositions, GL_DYNAMIC_COPY);
+        glBindVertexArray(vertexArray[i]);
         glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, NULL);
         glEnableVertexAttribArray(0);
         
