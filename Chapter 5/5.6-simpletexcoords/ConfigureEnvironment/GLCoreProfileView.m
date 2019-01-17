@@ -232,7 +232,7 @@
 - (void)lifeTimerUpdate {
     _lifeDuration += _lifeTimer.timeInterval;
     // _lifeDuration为程序运行时间
-//    [self drawRect:self.bounds];
+    [self drawRect:self.bounds];
 }
 
 #pragma mark - accessor methods
