@@ -1,60 +1,64 @@
 //
-//  GLCoreProfileView.m
-//  ConfigureEnvironment
+//  MainViewController.m
+//  OpenGLESInitialExample
 //
-//  Created by 陈杰 on 26/10/2017.
-//  Copyright © 2017 陈杰. All rights reserved.
+//  Created by chenjie on 2019/4/2.
+//  Copyright © 2019 starrythrone. All rights reserved.
 //
 
+#import "MainViewController.h"
 
-#import "GLCoreProfileView.h"
-//#import <OpenGL/gl3.h>
-#import <OpenGL/OpenGL.h>
-#import <GLKit/GLKit.h>
-
-@interface GLCoreProfileView()
-@property (atomic, strong) NSTimer *lifeTimer;
-@property (atomic, assign) CGFloat lifeDuration;
+@interface MainViewController ()
 
 @property (atomic, assign) GLuint program;
 @property (atomic, assign) GLuint vertexArray;
+
 @end
 
-@implementation GLCoreProfileView
-- (instancetype)initWithCoder:(NSCoder *)decoder {
-    NSOpenGLPixelFormatAttribute pixelFormatAttributes[] = {
-        NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersion4_1Core,
-        0
-    };
-    NSOpenGLPixelFormat *pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:pixelFormatAttributes];
-    NSOpenGLContext *openGLContext = [[NSOpenGLContext alloc] initWithFormat:pixelFormat shareContext:nil];
-    if (self = [super initWithCoder:decoder]) {
-        [self setOpenGLContext:openGLContext];
-        [self.openGLContext makeCurrentContext];
-        
-        _lifeTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(lifeTimerUpdate) userInfo:nil repeats:YES];
-    }
-    return self;
+@implementation MainViewController
+
+#pragma mark - Life Cycle
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    GLKView *view = (GLKView *)self.view;
+    view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
+    view.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
+    view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
+    view.drawableStencilFormat = GLKViewDrawableStencilFormat8;
+    view.drawableMultisample = GLKViewDrawableMultisample4X;
+    [EAGLContext setCurrentContext:view.context];
+    // Set animation frame rate
+    self.preferredFramesPerSecond = 60;
+    [self prepareOpenGL];
 }
 
-- (void)dealloc {
-    [_lifeTimer invalidate];
-    _lifeTimer = nil;
+#pragma mark - Override
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
+    glClearColor(0.0f, 0.0f, 0.1f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    glDeleteVertexArrays(1, &_vertexArray);
-    glDeleteProgram(_program);
+    glUseProgram(_program);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glFlush();
+}
+
+#pragma mark - Private Methods
+- (void)printAllSupportedExtensions {
+    int max = 0;
+    glGetIntegerv(GL_NUM_EXTENSIONS, &max);
+    NSMutableSet *extensions = [NSMutableSet set];
+    for (int i = 0; i < max; i++) {
+        [extensions addObject:@((char *)glGetStringi(GL_EXTENSIONS, i))];
+    }
+    NSLog(@"%@", extensions);
 }
 
 - (void)prepareOpenGL {
-    [super prepareOpenGL];
-    NSLog(@"Version: %s", glGetString(GL_VERSION));
-    NSLog(@"Renderer: %s", glGetString(GL_RENDERER));
-    NSLog(@"Vendor: %s", glGetString(GL_VENDOR));
-    NSLog(@"GLSL Version: %s", glGetString(GL_SHADING_LANGUAGE_VERSION));
-    
     [self loadShaders];
-    glGenVertexArrays(1, &_vertexArray);
-    glBindVertexArray(_vertexArray);
+    
+    glGenVertexArraysOES(1, &_vertexArray);
+    glBindVertexArrayOES(_vertexArray);
 }
 
 - (BOOL)loadShaders {
@@ -142,30 +146,4 @@
     return YES;
 }
 
-- (void)reshape {
-    [super reshape];
-    NSRect bounds = [self bounds];
-    NSRect backRect = [self convertRectToBacking:bounds];
-    glViewport(0, 0, NSWidth(backRect), NSHeight(backRect));
-}
-
-- (void)drawRect:(NSRect)dirtyRect {    
-    const GLfloat color[] = { (float)sin(_lifeDuration) * 0.5f + 0.5f, (float)cos(_lifeDuration) * 0.5f + 0.5f, 0.0f, 1.0f };
-    glClearBufferfv(GL_COLOR, 0, color);
-    
-    // 当glDrawArrays画顶点时可以指定点的大小
-    // glPointSize(40);
-    glUseProgram(_program);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
-    glFlush();
-}
-
-
-- (void)lifeTimerUpdate {
-    _lifeDuration += _lifeTimer.timeInterval;
-    [self drawRect:self.bounds];
-}
 @end
-
-
-
