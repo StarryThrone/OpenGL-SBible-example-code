@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5084E2D2272AB8100F25905 /* ShaderV.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084E2C2272AB8100F25905 /* ShaderV.vsh */; };
+		F5084E2F2272ABA200F25905 /* ShaderTC.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084E2E2272ABA200F25905 /* ShaderTC.vsh */; };
+		F5084E312272ABCE00F25905 /* ShaderTE.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084E302272ABCE00F25905 /* ShaderTE.vsh */; };
+		F5084E332272AC5B00F25905 /* ShaderF.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084E322272AC5B00F25905 /* ShaderF.vsh */; };
 		F58B233D1FA1784500C8368F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F58B233C1FA1784500C8368F /* AppDelegate.m */; };
 		F58B23401FA1784500C8368F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58B233F1FA1784500C8368F /* ViewController.m */; };
 		F58B23421FA1784500C8368F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58B23411FA1784500C8368F /* Assets.xcassets */; };
@@ -15,13 +19,13 @@
 		F58B23511FA179F900C8368F /* GLCoreProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58B23501FA179F900C8368F /* GLCoreProfileView.m */; };
 		F58B23541FA1911E00C8368F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58B23531FA1910800C8368F /* OpenGL.framework */; };
 		F58B23561FA1913D00C8368F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58B23551FA1913400C8368F /* GLKit.framework */; };
-		F58B236E1FA3580100C8368F /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F58B236D1FA3580100C8368F /* Shader.vsh */; };
-		F58B23E81FA8A30C00C8368F /* Shader.tcsh in Resources */ = {isa = PBXBuildFile; fileRef = F58B23E71FA8A30C00C8368F /* Shader.tcsh */; };
-		F5A83F3C1FD946560010F865 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = F5A83F3B1FD946560010F865 /* Shader.fsh */; };
-		F5FEBD8D1FA9C9D3003517C9 /* Shader.tesh in Resources */ = {isa = PBXBuildFile; fileRef = F5FEBD8C1FA9C9D3003517C9 /* Shader.tesh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5084E2C2272AB8100F25905 /* ShaderV.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ShaderV.vsh; sourceTree = "<group>"; };
+		F5084E2E2272ABA200F25905 /* ShaderTC.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ShaderTC.vsh; sourceTree = "<group>"; };
+		F5084E302272ABCE00F25905 /* ShaderTE.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ShaderTE.vsh; sourceTree = "<group>"; };
+		F5084E322272AC5B00F25905 /* ShaderF.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ShaderF.vsh; sourceTree = "<group>"; };
 		F58B23381FA1784500C8368F /* ConfigureEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfigureEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58B233B1FA1784500C8368F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F58B233C1FA1784500C8368F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,10 +40,6 @@
 		F58B23501FA179F900C8368F /* GLCoreProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLCoreProfileView.m; sourceTree = "<group>"; };
 		F58B23531FA1910800C8368F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		F58B23551FA1913400C8368F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		F58B236D1FA3580100C8368F /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
-		F58B23E71FA8A30C00C8368F /* Shader.tcsh */ = {isa = PBXFileReference; lastKnownFileType = text; path = Shader.tcsh; sourceTree = "<group>"; };
-		F5A83F3B1FD946560010F865 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
-		F5FEBD8C1FA9C9D3003517C9 /* Shader.tesh */ = {isa = PBXFileReference; lastKnownFileType = text; path = Shader.tesh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5084E342272AC8100F25905 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F58B233B1FA1784500C8368F /* AppDelegate.h */,
+				F58B233C1FA1784500C8368F /* AppDelegate.m */,
+				F58B233E1FA1784500C8368F /* ViewController.h */,
+				F58B233F1FA1784500C8368F /* ViewController.m */,
+				F58B23411FA1784500C8368F /* Assets.xcassets */,
+				F58B23431FA1784500C8368F /* Main.storyboard */,
+				F58B23471FA1784500C8368F /* main.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		F58B232F1FA1784500C8368F = {
 			isa = PBXGroup;
 			children = (
@@ -75,21 +89,15 @@
 		F58B233A1FA1784500C8368F /* ConfigureEnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				F58B236D1FA3580100C8368F /* Shader.vsh */,
-				F58B23E71FA8A30C00C8368F /* Shader.tcsh */,
-				F5FEBD8C1FA9C9D3003517C9 /* Shader.tesh */,
-				F5A83F3B1FD946560010F865 /* Shader.fsh */,
-				F58B233B1FA1784500C8368F /* AppDelegate.h */,
-				F58B233C1FA1784500C8368F /* AppDelegate.m */,
-				F58B233E1FA1784500C8368F /* ViewController.h */,
-				F58B233F1FA1784500C8368F /* ViewController.m */,
-				F58B23411FA1784500C8368F /* Assets.xcassets */,
-				F58B23431FA1784500C8368F /* Main.storyboard */,
-				F58B23461FA1784500C8368F /* Info.plist */,
-				F58B23471FA1784500C8368F /* main.m */,
 				F58B23491FA1784500C8368F /* ConfigureEnvironment.entitlements */,
+				F58B23461FA1784500C8368F /* Info.plist */,
+				F5084E342272AC8100F25905 /* Others */,
 				F58B234F1FA179F900C8368F /* GLCoreProfileView.h */,
 				F58B23501FA179F900C8368F /* GLCoreProfileView.m */,
+				F5084E2C2272AB8100F25905 /* ShaderV.vsh */,
+				F5084E2E2272ABA200F25905 /* ShaderTC.vsh */,
+				F5084E302272ABCE00F25905 /* ShaderTE.vsh */,
+				F5084E322272AC5B00F25905 /* ShaderF.vsh */,
 			);
 			path = ConfigureEnvironment;
 			sourceTree = "<group>";
@@ -161,12 +169,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A83F3C1FD946560010F865 /* Shader.fsh in Resources */,
-				F5FEBD8D1FA9C9D3003517C9 /* Shader.tesh in Resources */,
 				F58B23421FA1784500C8368F /* Assets.xcassets in Resources */,
+				F5084E2D2272AB8100F25905 /* ShaderV.vsh in Resources */,
+				F5084E332272AC5B00F25905 /* ShaderF.vsh in Resources */,
+				F5084E312272ABCE00F25905 /* ShaderTE.vsh in Resources */,
 				F58B23451FA1784500C8368F /* Main.storyboard in Resources */,
-				F58B236E1FA3580100C8368F /* Shader.vsh in Resources */,
-				F58B23E81FA8A30C00C8368F /* Shader.tcsh in Resources */,
+				F5084E2F2272ABA200F25905 /* ShaderTC.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

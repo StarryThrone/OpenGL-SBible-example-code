@@ -51,6 +51,8 @@
 }
 
 - (void)prepareOpenGL {
+    [super prepareOpenGL];
+    
     NSLog(@"Version: %s", glGetString(GL_VERSION));
     NSLog(@"Renderer: %s", glGetString(GL_RENDERER));
     NSLog(@"Vendor: %s", glGetString(GL_VENDOR));
@@ -62,6 +64,8 @@
 }
 
 - (void)reshape {
+    [super reshape];
+    
     NSRect bounds = [self bounds];
     glViewport(0, 0, NSWidth(bounds), NSHeight(bounds));
 }
@@ -80,35 +84,50 @@
 
 #pragma mark - private methods
 - (BOOL)loadShaders {
+    self.program = glCreateProgram();
+
     GLuint vertexShader;
-    GLuint tControlShader;
-    GLuint tEvaluationShader;
-    GLuint fragShader;
-    NSString *vertexShaderPathName;
-    NSString *tControlShaderPath;
-    NSString *tEvaluationShaderPath;
-    NSString *fragShaderPathName;
-    
-    _program = glCreateProgram();
-    
-    vertexShaderPathName = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
-    if (![self compileShader:&vertexShader type:GL_VERTEX_SHADER filePath:vertexShaderPathName]) {
-        NSLog(@"Failed to compile vertex shader");
+    NSString *vertexShaderPath = [[NSBundle mainBundle] pathForResource:@"ShaderV" ofType:@"vsh"];
+    if (!vertexShaderPath) {
+        NSLog(@"Can not load vertexShader file");
+        return NO;
     }
-    
-    tControlShaderPath = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"tcsh"];
+    if (![self compileShader:&vertexShader type:GL_VERTEX_SHADER filePath:vertexShaderPath]) {
+        NSLog(@"Failed to compile vertex shader");
+        return NO;
+    }
+
+    GLuint tControlShader;
+    NSString *tControlShaderPath = [[NSBundle mainBundle] pathForResource:@"ShaderTC" ofType:@"vsh"];
+    if (!tControlShaderPath) {
+        NSLog(@"Can not load tControlShader file");
+        return NO;
+    }
     if (![self compileShader:&tControlShader type:GL_TESS_CONTROL_SHADER filePath:tControlShaderPath]) {
         NSLog(@"Failed to compile tesselation control shader");
+        return NO;
     }
     
-    tEvaluationShaderPath = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"tesh"];
+    GLuint tEvaluationShader;
+    NSString *tEvaluationShaderPath = [[NSBundle mainBundle] pathForResource:@"ShaderTE" ofType:@"vsh"];
+    if (!tEvaluationShaderPath) {
+        NSLog(@"Can not load tEvaluationShader file");
+        return NO;
+    }
     if (![self compileShader:&tEvaluationShader type:GL_TESS_EVALUATION_SHADER filePath:tEvaluationShaderPath]) {
         NSLog(@"Failed to compile tesselation evaluation shader");
+        return NO;
     }
-    
-    fragShaderPathName = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
-    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER filePath:fragShaderPathName]) {
+
+    GLuint fragShader;
+    NSString *fragShaderPath = [[NSBundle mainBundle] pathForResource:@"ShaderF" ofType:@"vsh"];
+    if (!fragShaderPath) {
+        NSLog(@"Can not load fragShader file");
+        return NO;
+    }
+    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER filePath:fragShaderPath]) {
         NSLog(@"Failed to compile fragment shader");
+        return NO;
     }
     
     glAttachShader(_program, vertexShader);
