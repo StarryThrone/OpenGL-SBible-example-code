@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5084EA12273335A00F25905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5084EA02273335A00F25905 /* AppDelegate.swift */; };
+		F5084EA32273335A00F25905 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5084EA22273335A00F25905 /* ViewController.swift */; };
+		F5084EA52273335B00F25905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5084EA42273335B00F25905 /* Assets.xcassets */; };
+		F5084EA82273335B00F25905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5084EA62273335B00F25905 /* Main.storyboard */; };
+		F5084EB2227333E200F25905 /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5084EB1227333E200F25905 /* GLCoreProfileView.swift */; };
+		F5084EBC2273374000F25905 /* ShaderG.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EBB2273374000F25905 /* ShaderG.vsh */; };
+		F5084EF02273FCED00F25905 /* ShaderF.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EEC2273FCED00F25905 /* ShaderF.vsh */; };
+		F5084EF12273FCED00F25905 /* ShaderTC.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EED2273FCED00F25905 /* ShaderTC.vsh */; };
+		F5084EF22273FCED00F25905 /* ShaderV.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EEE2273FCED00F25905 /* ShaderV.vsh */; };
+		F5084EF32273FCED00F25905 /* ShaderTE.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EEF2273FCED00F25905 /* ShaderTE.vsh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5084E9D2273335A00F25905 /* GeometryShader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeometryShader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5084EA02273335A00F25905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5084EA22273335A00F25905 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5084EA42273335B00F25905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5084EA72273335B00F25905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5084EA92273335B00F25905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5084EAA2273335B00F25905 /* GeometryShader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeometryShader.entitlements; sourceTree = "<group>"; };
+		F5084EB1227333E200F25905 /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F5084EBB2273374000F25905 /* ShaderG.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ShaderG.vsh; sourceTree = "<group>"; };
+		F5084EEC2273FCED00F25905 /* ShaderF.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderF.vsh; sourceTree = "<group>"; };
+		F5084EED2273FCED00F25905 /* ShaderTC.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderTC.vsh; sourceTree = "<group>"; };
+		F5084EEE2273FCED00F25905 /* ShaderV.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderV.vsh; sourceTree = "<group>"; };
+		F5084EEF2273FCED00F25905 /* ShaderTE.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderTE.vsh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5084E9A2273335A00F25905 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5084E942273335A00F25905 = {
+			isa = PBXGroup;
+			children = (
+				F5084E9F2273335A00F25905 /* GeometryShader */,
+				F5084E9E2273335A00F25905 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5084E9E2273335A00F25905 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5084E9D2273335A00F25905 /* GeometryShader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5084E9F2273335A00F25905 /* GeometryShader */ = {
+			isa = PBXGroup;
+			children = (
+				F5084EA92273335B00F25905 /* Info.plist */,
+				F5084EAA2273335B00F25905 /* GeometryShader.entitlements */,
+				F5084EB0227333BE00F25905 /* Others */,
+				F5084EB1227333E200F25905 /* GLCoreProfileView.swift */,
+				F5084EEE2273FCED00F25905 /* ShaderV.vsh */,
+				F5084EED2273FCED00F25905 /* ShaderTC.vsh */,
+				F5084EEF2273FCED00F25905 /* ShaderTE.vsh */,
+				F5084EBB2273374000F25905 /* ShaderG.vsh */,
+				F5084EEC2273FCED00F25905 /* ShaderF.vsh */,
+			);
+			path = GeometryShader;
+			sourceTree = "<group>";
+		};
+		F5084EB0227333BE00F25905 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F5084EA02273335A00F25905 /* AppDelegate.swift */,
+				F5084EA22273335A00F25905 /* ViewController.swift */,
+				F5084EA42273335B00F25905 /* Assets.xcassets */,
+				F5084EA62273335B00F25905 /* Main.storyboard */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5084E9C2273335A00F25905 /* GeometryShader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5084EAD2273335B00F25905 /* Build configuration list for PBXNativeTarget "GeometryShader" */;
+			buildPhases = (
+				F5084E992273335A00F25905 /* Sources */,
+				F5084E9A2273335A00F25905 /* Frameworks */,
+				F5084E9B2273335A00F25905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeometryShader;
+			productName = GeometryShader;
+			productReference = F5084E9D2273335A00F25905 /* GeometryShader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5084E952273335A00F25905 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = starrythrone;
+				TargetAttributes = {
+					F5084E9C2273335A00F25905 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = F5084E982273335A00F25905 /* Build configuration list for PBXProject "GeometryShader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5084E942273335A00F25905;
+			productRefGroup = F5084E9E2273335A00F25905 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5084E9C2273335A00F25905 /* GeometryShader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5084E9B2273335A00F25905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5084EA52273335B00F25905 /* Assets.xcassets in Resources */,
+				F5084EA82273335B00F25905 /* Main.storyboard in Resources */,
+				F5084EBC2273374000F25905 /* ShaderG.vsh in Resources */,
+				F5084EF22273FCED00F25905 /* ShaderV.vsh in Resources */,
+				F5084EF32273FCED00F25905 /* ShaderTE.vsh in Resources */,
+				F5084EF12273FCED00F25905 /* ShaderTC.vsh in Resources */,
+				F5084EF02273FCED00F25905 /* ShaderF.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5084E992273335A00F25905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5084EA32273335A00F25905 /* ViewController.swift in Sources */,
+				F5084EA12273335A00F25905 /* AppDelegate.swift in Sources */,
+				F5084EB2227333E200F25905 /* GLCoreProfileView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5084EA62273335B00F25905 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5084EA72273335B00F25905 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5084EAB2273335B00F25905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5084EAC2273335B00F25905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5084EAE2273335B00F25905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GeometryShader/GeometryShader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				INFOPLIST_FILE = GeometryShader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = starrythrone.GeometryShader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5084EAF2273335B00F25905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GeometryShader/GeometryShader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				INFOPLIST_FILE = GeometryShader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = starrythrone.GeometryShader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5084E982273335A00F25905 /* Build configuration list for PBXProject "GeometryShader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5084EAB2273335B00F25905 /* Debug */,
+				F5084EAC2273335B00F25905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5084EAD2273335B00F25905 /* Build configuration list for PBXNativeTarget "GeometryShader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5084EAE2273335B00F25905 /* Debug */,
+				F5084EAF2273335B00F25905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5084E952273335A00F25905 /* Project object */;
+}

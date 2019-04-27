@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5084ECA2273FB5E00F25905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5084EC92273FB5E00F25905 /* AppDelegate.swift */; };
+		F5084ECC2273FB5E00F25905 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5084ECB2273FB5E00F25905 /* ViewController.swift */; };
+		F5084ECE2273FB5E00F25905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5084ECD2273FB5E00F25905 /* Assets.xcassets */; };
+		F5084ED12273FB5F00F25905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5084ECF2273FB5F00F25905 /* Main.storyboard */; };
+		F5084EDB2273FBD400F25905 /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5084EDA2273FBD400F25905 /* GLCoreProfileView.swift */; };
+		F5084EF62273FD2000F25905 /* ShaderV.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EF42273FD2000F25905 /* ShaderV.vsh */; };
+		F5084EF72273FD2000F25905 /* ShaderF.vsh in Resources */ = {isa = PBXBuildFile; fileRef = F5084EF52273FD2000F25905 /* ShaderF.vsh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5084EC62273FB5E00F25905 /* FragmentShader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FragmentShader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5084EC92273FB5E00F25905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5084ECB2273FB5E00F25905 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5084ECD2273FB5E00F25905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5084ED02273FB5F00F25905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5084ED22273FB5F00F25905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5084ED32273FB5F00F25905 /* FragmentShader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FragmentShader.entitlements; sourceTree = "<group>"; };
+		F5084EDA2273FBD400F25905 /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F5084EF42273FD2000F25905 /* ShaderV.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderV.vsh; sourceTree = "<group>"; };
+		F5084EF52273FD2000F25905 /* ShaderF.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderF.vsh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5084EC32273FB5E00F25905 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5084EBD2273FB5E00F25905 = {
+			isa = PBXGroup;
+			children = (
+				F5084EC82273FB5E00F25905 /* FragmentShader */,
+				F5084EC72273FB5E00F25905 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5084EC72273FB5E00F25905 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5084EC62273FB5E00F25905 /* FragmentShader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5084EC82273FB5E00F25905 /* FragmentShader */ = {
+			isa = PBXGroup;
+			children = (
+				F5084ED22273FB5F00F25905 /* Info.plist */,
+				F5084ED32273FB5F00F25905 /* FragmentShader.entitlements */,
+				F5084ED92273FBAC00F25905 /* Others */,
+				F5084EDA2273FBD400F25905 /* GLCoreProfileView.swift */,
+				F5084EF42273FD2000F25905 /* ShaderV.vsh */,
+				F5084EF52273FD2000F25905 /* ShaderF.vsh */,
+			);
+			path = FragmentShader;
+			sourceTree = "<group>";
+		};
+		F5084ED92273FBAC00F25905 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F5084EC92273FB5E00F25905 /* AppDelegate.swift */,
+				F5084ECB2273FB5E00F25905 /* ViewController.swift */,
+				F5084ECD2273FB5E00F25905 /* Assets.xcassets */,
+				F5084ECF2273FB5F00F25905 /* Main.storyboard */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5084EC52273FB5E00F25905 /* FragmentShader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5084ED62273FB5F00F25905 /* Build configuration list for PBXNativeTarget "FragmentShader" */;
+			buildPhases = (
+				F5084EC22273FB5E00F25905 /* Sources */,
+				F5084EC32273FB5E00F25905 /* Frameworks */,
+				F5084EC42273FB5E00F25905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FragmentShader;
+			productName = FragmentShader;
+			productReference = F5084EC62273FB5E00F25905 /* FragmentShader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5084EBE2273FB5E00F25905 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = starrythrone;
+				TargetAttributes = {
+					F5084EC52273FB5E00F25905 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = F5084EC12273FB5E00F25905 /* Build configuration list for PBXProject "FragmentShader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5084EBD2273FB5E00F25905;
+			productRefGroup = F5084EC72273FB5E00F25905 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5084EC52273FB5E00F25905 /* FragmentShader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5084EC42273FB5E00F25905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5084EF62273FD2000F25905 /* ShaderV.vsh in Resources */,
+				F5084ECE2273FB5E00F25905 /* Assets.xcassets in Resources */,
+				F5084ED12273FB5F00F25905 /* Main.storyboard in Resources */,
+				F5084EF72273FD2000F25905 /* ShaderF.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5084EC22273FB5E00F25905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5084ECC2273FB5E00F25905 /* ViewController.swift in Sources */,
+				F5084ECA2273FB5E00F25905 /* AppDelegate.swift in Sources */,
+				F5084EDB2273FBD400F25905 /* GLCoreProfileView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5084ECF2273FB5F00F25905 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5084ED02273FB5F00F25905 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5084ED42273FB5F00F25905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5084ED52273FB5F00F25905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5084ED72273FB5F00F25905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FragmentShader/FragmentShader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				INFOPLIST_FILE = FragmentShader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = starrythrone.FragmentShader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5084ED82273FB5F00F25905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FragmentShader/FragmentShader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				INFOPLIST_FILE = FragmentShader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = starrythrone.FragmentShader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5084EC12273FB5E00F25905 /* Build configuration list for PBXProject "FragmentShader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5084ED42273FB5F00F25905 /* Debug */,
+				F5084ED52273FB5F00F25905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5084ED62273FB5F00F25905 /* Build configuration list for PBXNativeTarget "FragmentShader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5084ED72273FB5F00F25905 /* Debug */,
+				F5084ED82273FB5F00F25905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5084EBE2273FB5E00F25905 /* Project object */;
+}
