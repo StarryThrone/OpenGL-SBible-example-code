@@ -12,10 +12,9 @@
 #import "TextureManager.h"
 #import "TDModelManger.h"
 
-typedef NS_ENUM(NSUInteger, GLCoreProfileViewRenderMode) {
-    GLCoreProfileViewRenderModeFull,
-    GLCoreProfileViewRenderModeLight,
-    GLCoreProfileViewRenderModeDepth,
+typedef NS_ENUM(NSUInteger, GLCoreProfileViewSmoothType) {
+    GLCoreProfileViewSmoothTypeLine,
+    GLCoreProfileViewSmoothTypePolygon,
 };
 
 @interface GLCoreProfileView()
@@ -23,7 +22,7 @@ typedef NS_ENUM(NSUInteger, GLCoreProfileViewRenderMode) {
 @property (nonatomic, strong) NSTimer *lifeTimer;
 @property (nonatomic, assign) CGFloat lifeDuration;
 @property (nonatomic, assign) BOOL paused;
-@property (nonatomic, assign) GLCoreProfileViewRenderMode renderMode;
+@property (nonatomic, assign) GLCoreProfileViewSmoothType smoothType;
 
 @property (atomic, assign) GLuint program;
 @property (atomic, assign) GLuint vertexArrayObject;
@@ -158,11 +157,16 @@ typedef NS_ENUM(NSUInteger, GLCoreProfileViewRenderMode) {
     GLKMatrix4 proj_matrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(50.0f), NSWidth(bounds) / NSHeight(bounds), 0.1f, 1000.0f);
     glUniformMatrix4fv(self.proj_matixLocation, 1, GL_FALSE, proj_matrix.m);
     
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // 开启抗锯齿效果
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glEnable(GL_LINE_SMOOTH);
+    self.smoothType = GLCoreProfileViewSmoothTypeLine;
+    if (self.smoothType == GLCoreProfileViewSmoothTypeLine) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glEnable(GL_LINE_SMOOTH);
+    } else if (self.smoothType == GLCoreProfileViewSmoothTypePolygon) {
+        glEnable(GL_POLYGON_SMOOTH);
+    }
     
     BOOL enableMutipleCubes = NO;
     if (enableMutipleCubes) {
