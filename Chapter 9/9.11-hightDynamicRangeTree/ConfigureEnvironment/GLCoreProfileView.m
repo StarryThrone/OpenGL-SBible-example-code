@@ -133,7 +133,7 @@ typedef NS_ENUM(NSUInteger, GLCoreProfileViewSmoothType) {
     
     glUseProgram(self.program);
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE0, self.texture);
+    glBindTexture(GL_TEXTURE_2D, self.texture);
     glUniform1i(self.textureLocation, 0);
     GLfloat exposure = sinf(GLKMathDegreesToRadians(total_time * 10)) * 16.0f + 16.0f;
     exposure = 32;
