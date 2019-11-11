@@ -45,6 +45,18 @@ class GLCoreProfileView: NSOpenGLView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    deinit {
+        if self.perVertexProgram != 0 {
+            glDeleteProgram(self.perVertexProgram)
+        }
+        if self.perFragmentProgram != 0 {
+            glDeleteProgram(self.perFragmentProgram)
+        }
+        if self.uniformsBuffer != 0 {
+            glDeleteBuffers(0, &self.uniformsBuffer)
+        }
+    }
         
     //MARK:- Private Methods: Layout
     override func reshape() {
