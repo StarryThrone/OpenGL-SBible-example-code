@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F52EF857237558EF00D7AFB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EF856237558EF00D7AFB3 /* AppDelegate.swift */; };
+		F52EF85B237558EF00D7AFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F52EF85A237558EF00D7AFB3 /* Assets.xcassets */; };
+		F52EF8672375594700D7AFB3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EF8662375594700D7AFB3 /* main.swift */; };
+		F52EF869237559FF00D7AFB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EF868237559FF00D7AFB3 /* MainViewController.swift */; };
+		F52EF86B2375626000D7AFB3 /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EF86A2375626000D7AFB3 /* GLCoreProfileView.swift */; };
+		F52EF87123756C0800D7AFB3 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EF87023756C0700D7AFB3 /* ModelManager.swift */; };
+		F59A6FF52375B651009FF6FB /* sphere.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F59A6FF42375B651009FF6FB /* sphere.sbm */; };
+		F59A6FFA2375BC94009FF6FB /* perFragmentFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F59A6FF62375BC94009FF6FB /* perFragmentFS.glsl */; };
+		F59A6FFB2375BC94009FF6FB /* perVertexVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F59A6FF72375BC94009FF6FB /* perVertexVS.glsl */; };
+		F59A6FFC2375BC94009FF6FB /* perVertexFS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F59A6FF82375BC94009FF6FB /* perVertexFS.glsl */; };
+		F59A6FFD2375BC94009FF6FB /* perFragmentVS.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F59A6FF92375BC94009FF6FB /* perFragmentVS.glsl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F52EF853237558EF00D7AFB3 /* PhongLighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhongLighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52EF856237558EF00D7AFB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F52EF85A237558EF00D7AFB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F52EF85F237558EF00D7AFB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F52EF860237558EF00D7AFB3 /* PhongLighting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhongLighting.entitlements; sourceTree = "<group>"; };
+		F52EF8662375594700D7AFB3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F52EF868237559FF00D7AFB3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F52EF86A2375626000D7AFB3 /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F52EF87023756C0700D7AFB3 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		F59A6FF42375B651009FF6FB /* sphere.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sphere.sbm; sourceTree = "<group>"; };
+		F59A6FF62375BC94009FF6FB /* perFragmentFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = perFragmentFS.glsl; sourceTree = "<group>"; };
+		F59A6FF72375BC94009FF6FB /* perVertexVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = perVertexVS.glsl; sourceTree = "<group>"; };
+		F59A6FF82375BC94009FF6FB /* perVertexFS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = perVertexFS.glsl; sourceTree = "<group>"; };
+		F59A6FF92375BC94009FF6FB /* perFragmentVS.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = perFragmentVS.glsl; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F52EF850237558EF00D7AFB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F52EF84A237558EF00D7AFB3 = {
+			isa = PBXGroup;
+			children = (
+				F59A6FFE2376449B009FF6FB /* Source */,
+				F52EF855237558EF00D7AFB3 /* PhongLighting */,
+				F52EF854237558EF00D7AFB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F52EF854237558EF00D7AFB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F52EF853237558EF00D7AFB3 /* PhongLighting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F52EF855237558EF00D7AFB3 /* PhongLighting */ = {
+			isa = PBXGroup;
+			children = (
+				F52EF85A237558EF00D7AFB3 /* Assets.xcassets */,
+				F52EF85F237558EF00D7AFB3 /* Info.plist */,
+				F52EF860237558EF00D7AFB3 /* PhongLighting.entitlements */,
+				F52EF8662375594700D7AFB3 /* main.swift */,
+			);
+			path = PhongLighting;
+			sourceTree = "<group>";
+		};
+		F59A6FFE2376449B009FF6FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F59A6FF92375BC94009FF6FB /* perFragmentVS.glsl */,
+				F59A6FF62375BC94009FF6FB /* perFragmentFS.glsl */,
+				F59A6FF72375BC94009FF6FB /* perVertexVS.glsl */,
+				F59A6FF82375BC94009FF6FB /* perVertexFS.glsl */,
+				F59A6FF42375B651009FF6FB /* sphere.sbm */,
+				F52EF856237558EF00D7AFB3 /* AppDelegate.swift */,
+				F52EF868237559FF00D7AFB3 /* MainViewController.swift */,
+				F52EF86A2375626000D7AFB3 /* GLCoreProfileView.swift */,
+				F52EF87023756C0700D7AFB3 /* ModelManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F52EF852237558EF00D7AFB3 /* PhongLighting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52EF863237558EF00D7AFB3 /* Build configuration list for PBXNativeTarget "PhongLighting" */;
+			buildPhases = (
+				F52EF84F237558EF00D7AFB3 /* Sources */,
+				F52EF850237558EF00D7AFB3 /* Frameworks */,
+				F52EF851237558EF00D7AFB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhongLighting;
+			productName = PhongLighting;
+			productReference = F52EF853237558EF00D7AFB3 /* PhongLighting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F52EF84B237558EF00D7AFB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F52EF852237558EF00D7AFB3 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F52EF84E237558EF00D7AFB3 /* Build configuration list for PBXProject "PhongLighting" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F52EF84A237558EF00D7AFB3;
+			productRefGroup = F52EF854237558EF00D7AFB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F52EF852237558EF00D7AFB3 /* PhongLighting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F52EF851237558EF00D7AFB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59A6FF52375B651009FF6FB /* sphere.sbm in Resources */,
+				F59A6FFA2375BC94009FF6FB /* perFragmentFS.glsl in Resources */,
+				F52EF85B237558EF00D7AFB3 /* Assets.xcassets in Resources */,
+				F59A6FFC2375BC94009FF6FB /* perVertexFS.glsl in Resources */,
+				F59A6FFB2375BC94009FF6FB /* perVertexVS.glsl in Resources */,
+				F59A6FFD2375BC94009FF6FB /* perFragmentVS.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F52EF84F237558EF00D7AFB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52EF857237558EF00D7AFB3 /* AppDelegate.swift in Sources */,
+				F52EF8672375594700D7AFB3 /* main.swift in Sources */,
+				F52EF87123756C0800D7AFB3 /* ModelManager.swift in Sources */,
+				F52EF86B2375626000D7AFB3 /* GLCoreProfileView.swift in Sources */,
+				F52EF869237559FF00D7AFB3 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F52EF861237558EF00D7AFB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F52EF862237558EF00D7AFB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F52EF864237558EF00D7AFB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhongLighting/PhongLighting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PhongLighting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.PhongLighting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F52EF865237558EF00D7AFB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhongLighting/PhongLighting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PhongLighting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.PhongLighting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F52EF84E237558EF00D7AFB3 /* Build configuration list for PBXProject "PhongLighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52EF861237558EF00D7AFB3 /* Debug */,
+				F52EF862237558EF00D7AFB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F52EF863237558EF00D7AFB3 /* Build configuration list for PBXNativeTarget "PhongLighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52EF864237558EF00D7AFB3 /* Debug */,
+				F52EF865237558EF00D7AFB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F52EF84B237558EF00D7AFB3 /* Project object */;
+}
