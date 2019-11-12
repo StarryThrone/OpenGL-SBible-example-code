@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5E5C009237AA92E001451CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5C008237AA92E001451CC /* AppDelegate.swift */; };
+		F5E5C00D237AA930001451CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E5C00C237AA930001451CC /* Assets.xcassets */; };
+		F5E5C019237AA945001451CC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5C018237AA945001451CC /* main.swift */; };
+		F5E5C01C237AAA4A001451CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5C01B237AAA4A001451CC /* MainViewController.swift */; };
+		F5E5C01E237AAA81001451CC /* GLProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5C01D237AAA81001451CC /* GLProfileView.swift */; };
+		F5E5C020237AAB85001451CC /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5C01F237AAB85001451CC /* ModelManager.swift */; };
+		F5E5C022237AABD3001451CC /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E5C021237AABD3001451CC /* VertexShader.glsl */; };
+		F5E5C024237AABDF001451CC /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E5C023237AABDF001451CC /* FragmentShader.glsl */; };
+		F5E5C026237AAF23001451CC /* dragon.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F5E5C025237AAF23001451CC /* dragon.sbm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5E5C005237AA92E001451CC /* RimLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RimLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E5C008237AA92E001451CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5E5C00C237AA930001451CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5E5C011237AA930001451CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E5C012237AA930001451CC /* RimLight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RimLight.entitlements; sourceTree = "<group>"; };
+		F5E5C018237AA945001451CC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F5E5C01B237AAA4A001451CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F5E5C01D237AAA81001451CC /* GLProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLProfileView.swift; sourceTree = "<group>"; };
+		F5E5C01F237AAB85001451CC /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = ../../PhongLighting/Source/ModelManager.swift; sourceTree = "<group>"; };
+		F5E5C021237AABD3001451CC /* VertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		F5E5C023237AABDF001451CC /* FragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		F5E5C025237AAF23001451CC /* dragon.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = dragon.sbm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5E5C002237AA92E001451CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5E5BFFC237AA92E001451CC = {
+			isa = PBXGroup;
+			children = (
+				F5E5C01A237AAA36001451CC /* Source */,
+				F5E5C007237AA92E001451CC /* RimLight */,
+				F5E5C006237AA92E001451CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5E5C006237AA92E001451CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5E5C005237AA92E001451CC /* RimLight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5E5C007237AA92E001451CC /* RimLight */ = {
+			isa = PBXGroup;
+			children = (
+				F5E5C00C237AA930001451CC /* Assets.xcassets */,
+				F5E5C011237AA930001451CC /* Info.plist */,
+				F5E5C012237AA930001451CC /* RimLight.entitlements */,
+				F5E5C018237AA945001451CC /* main.swift */,
+			);
+			path = RimLight;
+			sourceTree = "<group>";
+		};
+		F5E5C01A237AAA36001451CC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F5E5C025237AAF23001451CC /* dragon.sbm */,
+				F5E5C021237AABD3001451CC /* VertexShader.glsl */,
+				F5E5C023237AABDF001451CC /* FragmentShader.glsl */,
+				F5E5C008237AA92E001451CC /* AppDelegate.swift */,
+				F5E5C01B237AAA4A001451CC /* MainViewController.swift */,
+				F5E5C01D237AAA81001451CC /* GLProfileView.swift */,
+				F5E5C01F237AAB85001451CC /* ModelManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5E5C004237AA92E001451CC /* RimLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5E5C015237AA930001451CC /* Build configuration list for PBXNativeTarget "RimLight" */;
+			buildPhases = (
+				F5E5C001237AA92E001451CC /* Sources */,
+				F5E5C002237AA92E001451CC /* Frameworks */,
+				F5E5C003237AA92E001451CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RimLight;
+			productName = RimLight;
+			productReference = F5E5C005237AA92E001451CC /* RimLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5E5BFFD237AA92E001451CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F5E5C004237AA92E001451CC = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F5E5C000237AA92E001451CC /* Build configuration list for PBXProject "RimLight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5E5BFFC237AA92E001451CC;
+			productRefGroup = F5E5C006237AA92E001451CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5E5C004237AA92E001451CC /* RimLight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5E5C003237AA92E001451CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E5C022237AABD3001451CC /* VertexShader.glsl in Resources */,
+				F5E5C026237AAF23001451CC /* dragon.sbm in Resources */,
+				F5E5C024237AABDF001451CC /* FragmentShader.glsl in Resources */,
+				F5E5C00D237AA930001451CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5E5C001237AA92E001451CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E5C01C237AAA4A001451CC /* MainViewController.swift in Sources */,
+				F5E5C01E237AAA81001451CC /* GLProfileView.swift in Sources */,
+				F5E5C020237AAB85001451CC /* ModelManager.swift in Sources */,
+				F5E5C019237AA945001451CC /* main.swift in Sources */,
+				F5E5C009237AA92E001451CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5E5C013237AA930001451CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5E5C014237AA930001451CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5E5C016237AA930001451CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RimLight/RimLight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RimLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.RimLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5E5C017237AA930001451CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RimLight/RimLight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RimLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.RimLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5E5C000237AA92E001451CC /* Build configuration list for PBXProject "RimLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E5C013237AA930001451CC /* Debug */,
+				F5E5C014237AA930001451CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5E5C015237AA930001451CC /* Build configuration list for PBXNativeTarget "RimLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E5C016237AA930001451CC /* Debug */,
+				F5E5C017237AA930001451CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5E5BFFD237AA92E001451CC /* Project object */;
+}

@@ -60,6 +60,9 @@ class MainViewController: NSViewController {
         
     func monitorKeyboardEvent() {
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
+            if event.characters == "P" {
+                self.paused = !self.paused
+            }
             return event
         }
     }
