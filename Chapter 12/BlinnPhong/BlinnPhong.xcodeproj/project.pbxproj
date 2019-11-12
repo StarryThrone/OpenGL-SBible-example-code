@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5E5BFDA237A6309001451CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5BFD9237A6309001451CC /* AppDelegate.swift */; };
+		F5E5BFDE237A630F001451CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E5BFDD237A630F001451CC /* Assets.xcassets */; };
+		F5E5BFED237A7419001451CC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5BFEC237A7419001451CC /* main.swift */; };
+		F5E5BFEF237A7440001451CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5BFEE237A7440001451CC /* MainViewController.swift */; };
+		F5E5BFF1237A7461001451CC /* GLProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5BFF0237A7461001451CC /* GLProfileView.swift */; };
+		F5E5BFF3237A762F001451CC /* vertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E5BFF2237A762F001451CC /* vertexShader.glsl */; };
+		F5E5BFF5237A763F001451CC /* fragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E5BFF4237A763F001451CC /* fragmentShader.glsl */; };
+		F5E5BFF7237A8A56001451CC /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E5BFF6237A8A56001451CC /* ModelManager.swift */; };
+		F5E5BFF9237A8D26001451CC /* sphere.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F5E5BFF8237A8D26001451CC /* sphere.sbm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5E5BFD6237A6309001451CC /* BlinnPhong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinnPhong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E5BFD9237A6309001451CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5E5BFDD237A630F001451CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5E5BFE2237A630F001451CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E5BFE3237A630F001451CC /* BlinnPhong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlinnPhong.entitlements; sourceTree = "<group>"; };
+		F5E5BFEC237A7419001451CC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F5E5BFEE237A7440001451CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F5E5BFF0237A7461001451CC /* GLProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLProfileView.swift; sourceTree = "<group>"; };
+		F5E5BFF2237A762F001451CC /* vertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vertexShader.glsl; sourceTree = "<group>"; };
+		F5E5BFF4237A763F001451CC /* fragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fragmentShader.glsl; sourceTree = "<group>"; };
+		F5E5BFF6237A8A56001451CC /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = ../../PhongLighting/Source/ModelManager.swift; sourceTree = "<group>"; };
+		F5E5BFF8237A8D26001451CC /* sphere.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; name = sphere.sbm; path = ../../PhongLighting/Source/sphere.sbm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5E5BFD3237A6309001451CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5E5BFCD237A6309001451CC = {
+			isa = PBXGroup;
+			children = (
+				F5E5BFE9237A6348001451CC /* Source */,
+				F5E5BFD8237A6309001451CC /* BlinnPhong */,
+				F5E5BFD7237A6309001451CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5E5BFD7237A6309001451CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5E5BFD6237A6309001451CC /* BlinnPhong.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5E5BFD8237A6309001451CC /* BlinnPhong */ = {
+			isa = PBXGroup;
+			children = (
+				F5E5BFDD237A630F001451CC /* Assets.xcassets */,
+				F5E5BFE2237A630F001451CC /* Info.plist */,
+				F5E5BFE3237A630F001451CC /* BlinnPhong.entitlements */,
+				F5E5BFEC237A7419001451CC /* main.swift */,
+			);
+			path = BlinnPhong;
+			sourceTree = "<group>";
+		};
+		F5E5BFE9237A6348001451CC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F5E5BFF6237A8A56001451CC /* ModelManager.swift */,
+				F5E5BFD9237A6309001451CC /* AppDelegate.swift */,
+				F5E5BFEE237A7440001451CC /* MainViewController.swift */,
+				F5E5BFF0237A7461001451CC /* GLProfileView.swift */,
+				F5E5BFF2237A762F001451CC /* vertexShader.glsl */,
+				F5E5BFF4237A763F001451CC /* fragmentShader.glsl */,
+				F5E5BFF8237A8D26001451CC /* sphere.sbm */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5E5BFD5237A6309001451CC /* BlinnPhong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5E5BFE6237A630F001451CC /* Build configuration list for PBXNativeTarget "BlinnPhong" */;
+			buildPhases = (
+				F5E5BFD2237A6309001451CC /* Sources */,
+				F5E5BFD3237A6309001451CC /* Frameworks */,
+				F5E5BFD4237A6309001451CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlinnPhong;
+			productName = BlinnPhong;
+			productReference = F5E5BFD6237A6309001451CC /* BlinnPhong.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5E5BFCE237A6309001451CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F5E5BFD5237A6309001451CC = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F5E5BFD1237A6309001451CC /* Build configuration list for PBXProject "BlinnPhong" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5E5BFCD237A6309001451CC;
+			productRefGroup = F5E5BFD7237A6309001451CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5E5BFD5237A6309001451CC /* BlinnPhong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5E5BFD4237A6309001451CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E5BFF5237A763F001451CC /* fragmentShader.glsl in Resources */,
+				F5E5BFF9237A8D26001451CC /* sphere.sbm in Resources */,
+				F5E5BFF3237A762F001451CC /* vertexShader.glsl in Resources */,
+				F5E5BFDE237A630F001451CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5E5BFD2237A6309001451CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E5BFEF237A7440001451CC /* MainViewController.swift in Sources */,
+				F5E5BFF1237A7461001451CC /* GLProfileView.swift in Sources */,
+				F5E5BFF7237A8A56001451CC /* ModelManager.swift in Sources */,
+				F5E5BFED237A7419001451CC /* main.swift in Sources */,
+				F5E5BFDA237A6309001451CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5E5BFE4237A630F001451CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5E5BFE5237A630F001451CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5E5BFE7237A630F001451CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BlinnPhong/BlinnPhong.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BlinnPhong/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.BlinnPhong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5E5BFE8237A630F001451CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BlinnPhong/BlinnPhong.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BlinnPhong/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.BlinnPhong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5E5BFD1237A6309001451CC /* Build configuration list for PBXProject "BlinnPhong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E5BFE4237A630F001451CC /* Debug */,
+				F5E5BFE5237A630F001451CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5E5BFE6237A630F001451CC /* Build configuration list for PBXNativeTarget "BlinnPhong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E5BFE7237A630F001451CC /* Debug */,
+				F5E5BFE8237A630F001451CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5E5BFCE237A6309001451CC /* Project object */;
+}
