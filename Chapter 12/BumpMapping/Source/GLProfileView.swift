@@ -25,9 +25,6 @@ class GLCoreProfileView: NSOpenGLView {
     //MARK:- Public properties
     // 除去暂停后实际渲染的时间
     var renderDuration: TimeInterval = 0
-    var enableRim: Bool = true
-    var rimColor = [GLfloat](repeating: 0.3, count: 3)
-    var rimPower: GLfloat = 2.5
     
     //MARK:- Private Properties
     private var glProgram: GLuint = 0
@@ -50,6 +47,8 @@ class GLCoreProfileView: NSOpenGLView {
     deinit {
         if self.glProgram != 0 {
             glDeleteProgram(self.glProgram)
+            glDeleteTextures(1, &self.textures.color)
+            glDeleteTextures(1, &self.textures.normals)
         }
     }
     
