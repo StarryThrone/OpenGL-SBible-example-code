@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F533561923852802002F78FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533561823852802002F78FB /* AppDelegate.swift */; };
+		F533561D23852806002F78FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F533561C23852806002F78FB /* Assets.xcassets */; };
+		F533562A2385282B002F78FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53356292385282B002F78FB /* main.swift */; };
+		F533562C23852889002F78FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533562B23852889002F78FB /* MainViewController.swift */; };
+		F533562E238528A6002F78FB /* GLProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533562D238528A6002F78FB /* GLProfileView.swift */; };
+		F53356312385512D002F78FB /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F533562F2385512D002F78FB /* FragmentShader.glsl */; };
+		F53356322385512D002F78FB /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F53356302385512D002F78FB /* VertexShader.glsl */; };
+		F533563423856B98002F78FB /* equirectangularmap1.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F533563323856B98002F78FB /* equirectangularmap1.ktx */; };
+		F533563623856C75002F78FB /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533563523856C75002F78FB /* TextureManager.swift */; };
+		F533563823856EEE002F78FB /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533563723856EEE002F78FB /* ModelManager.swift */; };
+		F533563A238570B8002F78FB /* dragon.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F5335639238570B8002F78FB /* dragon.sbm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F533561523852802002F78FB /* EquiRectangular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EquiRectangular.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F533561823852802002F78FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F533561C23852806002F78FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F533562123852806002F78FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F533562223852806002F78FB /* EquiRectangular.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EquiRectangular.entitlements; sourceTree = "<group>"; };
+		F53356292385282B002F78FB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F533562B23852889002F78FB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F533562D238528A6002F78FB /* GLProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLProfileView.swift; sourceTree = "<group>"; };
+		F533562F2385512D002F78FB /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		F53356302385512D002F78FB /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		F533563323856B98002F78FB /* equirectangularmap1.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = equirectangularmap1.ktx; sourceTree = "<group>"; };
+		F533563523856C75002F78FB /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		F533563723856EEE002F78FB /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		F5335639238570B8002F78FB /* dragon.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = dragon.sbm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F533561223852802002F78FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F533560C23852802002F78FB = {
+			isa = PBXGroup;
+			children = (
+				F53356282385281D002F78FB /* Source */,
+				F533561723852802002F78FB /* EquiRectangular */,
+				F533561623852802002F78FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F533561623852802002F78FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F533561523852802002F78FB /* EquiRectangular.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F533561723852802002F78FB /* EquiRectangular */ = {
+			isa = PBXGroup;
+			children = (
+				F533561C23852806002F78FB /* Assets.xcassets */,
+				F533562123852806002F78FB /* Info.plist */,
+				F533562223852806002F78FB /* EquiRectangular.entitlements */,
+			);
+			path = EquiRectangular;
+			sourceTree = "<group>";
+		};
+		F53356282385281D002F78FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F5335639238570B8002F78FB /* dragon.sbm */,
+				F533563323856B98002F78FB /* equirectangularmap1.ktx */,
+				F53356302385512D002F78FB /* VertexShader.glsl */,
+				F533562F2385512D002F78FB /* FragmentShader.glsl */,
+				F533561823852802002F78FB /* AppDelegate.swift */,
+				F53356292385282B002F78FB /* main.swift */,
+				F533562B23852889002F78FB /* MainViewController.swift */,
+				F533562D238528A6002F78FB /* GLProfileView.swift */,
+				F533563523856C75002F78FB /* TextureManager.swift */,
+				F533563723856EEE002F78FB /* ModelManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F533561423852802002F78FB /* EquiRectangular */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F533562523852806002F78FB /* Build configuration list for PBXNativeTarget "EquiRectangular" */;
+			buildPhases = (
+				F533561123852802002F78FB /* Sources */,
+				F533561223852802002F78FB /* Frameworks */,
+				F533561323852802002F78FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EquiRectangular;
+			productName = EquiRectangular;
+			productReference = F533561523852802002F78FB /* EquiRectangular.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F533560D23852802002F78FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F533561423852802002F78FB = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F533561023852802002F78FB /* Build configuration list for PBXProject "EquiRectangular" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F533560C23852802002F78FB;
+			productRefGroup = F533561623852802002F78FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F533561423852802002F78FB /* EquiRectangular */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F533561323852802002F78FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533561D23852806002F78FB /* Assets.xcassets in Resources */,
+				F533563A238570B8002F78FB /* dragon.sbm in Resources */,
+				F53356322385512D002F78FB /* VertexShader.glsl in Resources */,
+				F53356312385512D002F78FB /* FragmentShader.glsl in Resources */,
+				F533563423856B98002F78FB /* equirectangularmap1.ktx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F533561123852802002F78FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533562C23852889002F78FB /* MainViewController.swift in Sources */,
+				F533562E238528A6002F78FB /* GLProfileView.swift in Sources */,
+				F533563623856C75002F78FB /* TextureManager.swift in Sources */,
+				F533562A2385282B002F78FB /* main.swift in Sources */,
+				F533561923852802002F78FB /* AppDelegate.swift in Sources */,
+				F533563823856EEE002F78FB /* ModelManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F533562323852806002F78FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F533562423852806002F78FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F533562623852806002F78FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EquiRectangular/EquiRectangular.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = EquiRectangular/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.EquiRectangular;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F533562723852806002F78FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EquiRectangular/EquiRectangular.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = EquiRectangular/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.EquiRectangular;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F533561023852802002F78FB /* Build configuration list for PBXProject "EquiRectangular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F533562323852806002F78FB /* Debug */,
+				F533562423852806002F78FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F533562523852806002F78FB /* Build configuration list for PBXNativeTarget "EquiRectangular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F533562623852806002F78FB /* Debug */,
+				F533562723852806002F78FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F533560D23852802002F78FB /* Project object */;
+}
