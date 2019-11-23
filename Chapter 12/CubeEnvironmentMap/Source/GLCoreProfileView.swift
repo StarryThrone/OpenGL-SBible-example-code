@@ -11,8 +11,6 @@ import GLKit
 fileprivate struct SkyboxProgramUniformLocation {
     var view_matrix: GLint = 0
     var tex_cubemap: GLint = 0
-    //MARK: TODO 临时纹理
-    var tempTexture: GLint = 0
 }
 
 fileprivate struct ModelProgramUniformLocation {
@@ -35,8 +33,6 @@ class GLCoreProfileView: NSOpenGLView {
     private var modelUniformsLocation = ModelProgramUniformLocation()
     
     private var cubMapTexture: GLuint = 0
-    //MARK: TODO 临时纹理
-    private var tempTexture: GLuint = 0
         
     //MARK:- Life Cycles
     override init?(frame frameRect: NSRect, pixelFormat format: NSOpenGLPixelFormat?) {
@@ -58,10 +54,6 @@ class GLCoreProfileView: NSOpenGLView {
         }
         if self.cubMapTexture != 0 {
             glDeleteTextures(1, &self.cubMapTexture)
-        }
-        //MARK: TODO 临时纹理
-        if self.tempTexture != 0 {
-            glDeleteTextures(1, &self.tempTexture)
         }
         if self.skyboxVertexAttributesObject != 0 {
             glDeleteVertexArrays(1, &self.skyboxVertexAttributesObject)
@@ -118,15 +110,6 @@ class GLCoreProfileView: NSOpenGLView {
         // 开启立方体贴图纹理面结合处插值采样特性
         // 开启该特效后，在立方体纹理贴图面的连接处的纹理采样会从两个面上采样数据，并进行插值，从而消除由于欠采样而产生的明显分割线
         glEnable(GLenum(GL_TEXTURE_CUBE_MAP_SEAMLESS))
-        
-        
-        //MARK: TODO 临时纹理
-        let textureLoaded1 = TextureManager.shareManager.loadObject(fileName: "ladybug_co.ktx", toTexture: &self.tempTexture, atIndex: GL_TEXTURE1)
-        if !textureLoaded1 {
-            print("Load texture failed.")
-            return
-        }
-        //MARK: TODO 临时纹理
 
         // 3. 加载模型
         let modelLoaded = ModelManager.shareManager.loadObject(fileName: "dragon.sbm")
@@ -147,10 +130,7 @@ class GLCoreProfileView: NSOpenGLView {
             return false
         }
         self.skyboxUniformsLocation.view_matrix = glGetUniformLocation(self.skyboxGLProgram, "view_matrix")
-        //MARK: TODO 立方体贴图纹理无法正常工作
         self.skyboxUniformsLocation.tex_cubemap = glGetUniformLocation(self.skyboxGLProgram, "tex_cubemap")
-        //MARK: TODO 临时纹理
-        self.skyboxUniformsLocation.tempTexture = glGetUniformLocation(self.skyboxGLProgram, "tempTexture")
         
         // 2. 准备绘制模型的OpenGL程序
         let modelShaders = ["ModelVertexShader" : GLenum(GL_VERTEX_SHADER), "ModelFragmentShader" : GLenum(GL_FRAGMENT_SHADER)]
@@ -260,7 +240,7 @@ class GLCoreProfileView: NSOpenGLView {
         glUseProgram(self.skyboxGLProgram)
         
         // 2.2 为天空盒OpenGL程序的统一变量赋值
-        var view_matrix = GLKMatrix4MakeLookAt(Float(15 * sin(self.renderDuration)), 0, Float(15 * cos(self.renderDuration)),
+        var view_matrix = GLKMatrix4MakeLookAt(Float(15 * sin(self.renderDuration * 0.08)), 0, Float(15 * cos(self.renderDuration * 0.08)),
                                                0, 0, 0,
                                                0, 1, 0)
         withUnsafePointer(to: &view_matrix.m) {
@@ -268,16 +248,9 @@ class GLCoreProfileView: NSOpenGLView {
                 glUniformMatrix4fv(self.skyboxUniformsLocation.view_matrix, 1, GLboolean(GL_FALSE), $0)
             }
         }
-        //MARK: TODO 立方体贴图纹理无法正常工作
         glActiveTexture(GLenum(GL_TEXTURE0))
         glBindTexture(GLenum(GL_TEXTURE_CUBE_MAP), self.cubMapTexture)
         glUniform1i(self.skyboxUniformsLocation.tex_cubemap, 0)
-
-        //MARK: TODO 临时纹理
-        glActiveTexture(GLenum(GL_TEXTURE1))
-        glBindTexture(GLenum(GL_TEXTURE_2D), self.tempTexture);
-        glUniform1i(self.skyboxUniformsLocation.tempTexture, 1)
-        //MARK: TODO 临时纹理
         
         // 2.3 绑定天空盒OpenGL程序所需要使用到的顶点属性数组对象
         glBindVertexArray(self.skyboxVertexAttributesObject)
@@ -301,7 +274,7 @@ class GLCoreProfileView: NSOpenGLView {
         }
 
         let xRotateMatrix = GLKMatrix4MakeXRotation(GLKMathDegreesToRadians(Float(self.renderDuration)))
-        let yRotateMatrix = GLKMatrix4MakeYRotation(GLKMathDegreesToRadians(Float(self.renderDuration) * GLKMathDegreesToRadians(130.1)))
+        let yRotateMatrix = GLKMatrix4MakeYRotation(GLKMathDegreesToRadians(Float(self.renderDuration) * 15))
         let translateMatrix = GLKMatrix4MakeTranslation(0, -4, 0)
         var mvMatrix = GLKMatrix4Multiply(GLKMatrix4Multiply(view_matrix, GLKMatrix4Multiply(xRotateMatrix, yRotateMatrix)), translateMatrix)
         withUnsafePointer(to: &mvMatrix.m) {

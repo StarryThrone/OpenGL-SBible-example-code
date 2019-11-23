@@ -234,10 +234,11 @@ class TextureManager {
         } else if target == GLenum(GL_TEXTURE_2D_ARRAY) {
             glTexImage3D(GLenum(GL_TEXTURE_2D_ARRAY), 0, GLint(fileHeader.glInternalFormat), GLsizei(fileHeader.pixelWidth), GLsizei(fileHeader.pixelHeight), GLsizei(fileHeader.arrayElements), 0, fileHeader.glFormat, fileHeader.glType, bodyDataAddress)
         } else if target == GLenum(GL_TEXTURE_CUBE_MAP) {
+            // 这里只处理无分级贴图的Case
             let faceDataSize = faceSize(forFileHeader: fileHeader)
             var faceDataAddress = bodyDataAddress;
             for index in 0..<fileHeader.faces {
-                glTexImage2D(GLenum(GL_TEXTURE_CUBE_MAP_POSITIVE_X) + index, GLint(fileHeader.mipLevels), GLint(fileHeader.glInternalFormat), GLsizei(fileHeader.pixelWidth), GLsizei(fileHeader.pixelHeight), 0, fileHeader.glFormat, fileHeader.glType, faceDataAddress)
+                glTexImage2D(GLenum(GL_TEXTURE_CUBE_MAP_POSITIVE_X) + index, 0, GLint(fileHeader.glInternalFormat), GLsizei(fileHeader.pixelWidth), GLsizei(fileHeader.pixelHeight), 0, fileHeader.glFormat, fileHeader.glType, faceDataAddress)
                 faceDataAddress = faceDataAddress.advanced(by: faceDataSize)
             }
         } else if target == GLenum(GL_TEXTURE_CUBE_MAP_ARRAY) {

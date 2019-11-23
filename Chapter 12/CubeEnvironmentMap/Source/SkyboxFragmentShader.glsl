@@ -1,18 +1,17 @@
 #version 410 core
 
-//MARK: TODO 立方体贴图纹理无法正常工作
+// 统一变量：立方体环境贴图采样器
 uniform samplerCube tex_cubemap;
-//MARK: TODO 临时纹理
-uniform sampler2D tempTexture;
 
+// 输入变量
 in VS_OUT {
     vec3    tc;
 } fs_in;
 
+// 输出变量
 layout (location = 0) out vec4 color;
 
 void main(void) {
-//    color = texture(tex_cubemap, fs_in.tc);
-    
-    color = texture(tempTexture, fs_in.tc.xy);
+    // 计算该片段的最终颜色
+    color = texture(tex_cubemap, fs_in.tc);
 }
