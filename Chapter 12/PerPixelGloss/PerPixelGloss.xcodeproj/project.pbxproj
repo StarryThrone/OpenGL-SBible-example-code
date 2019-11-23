@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F59BB281238928CF00EED3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BB280238928CF00EED3A0 /* AppDelegate.swift */; };
+		F59BB285238928D100EED3A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59BB284238928D100EED3A0 /* Assets.xcassets */; };
+		F59BB2922389290100EED3A0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BB2912389290100EED3A0 /* main.swift */; };
+		F59BB2942389293200EED3A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BB2932389293200EED3A0 /* MainViewController.swift */; };
+		F59BB2982389294A00EED3A0 /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BB2972389294A00EED3A0 /* GLCoreProfileView.swift */; };
+		F59BB29B238929B400EED3A0 /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F59BB299238929B400EED3A0 /* FragmentShader.glsl */; };
+		F59BB29C238929B400EED3A0 /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F59BB29A238929B400EED3A0 /* VertexShader.glsl */; };
+		F59BB29E23892C5800EED3A0 /* mountains3d.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F59BB29D23892C5800EED3A0 /* mountains3d.ktx */; };
+		F59BB2A023892C6A00EED3A0 /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BB29F23892C6A00EED3A0 /* TextureManager.swift */; };
+		F59BB2A223892DCB00EED3A0 /* pattern1.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F59BB2A123892DCB00EED3A0 /* pattern1.ktx */; };
+		F59BB2A423892E0B00EED3A0 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BB2A323892E0B00EED3A0 /* ModelManager.swift */; };
+		F59BB2A623892E3C00EED3A0 /* torus_nrms_tc.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F59BB2A523892E3C00EED3A0 /* torus_nrms_tc.sbm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F59BB27D238928CF00EED3A0 /* PerPixelGloss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerPixelGloss.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F59BB280238928CF00EED3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F59BB284238928D100EED3A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F59BB289238928D100EED3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F59BB28A238928D100EED3A0 /* PerPixelGloss.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PerPixelGloss.entitlements; sourceTree = "<group>"; };
+		F59BB2912389290100EED3A0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F59BB2932389293200EED3A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F59BB2972389294A00EED3A0 /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F59BB299238929B400EED3A0 /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		F59BB29A238929B400EED3A0 /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		F59BB29D23892C5800EED3A0 /* mountains3d.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = mountains3d.ktx; sourceTree = "<group>"; };
+		F59BB29F23892C6A00EED3A0 /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		F59BB2A123892DCB00EED3A0 /* pattern1.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = pattern1.ktx; sourceTree = "<group>"; };
+		F59BB2A323892E0B00EED3A0 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		F59BB2A523892E3C00EED3A0 /* torus_nrms_tc.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = torus_nrms_tc.sbm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F59BB27A238928CF00EED3A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F59BB274238928CF00EED3A0 = {
+			isa = PBXGroup;
+			children = (
+				F59BB290238928EF00EED3A0 /* Source */,
+				F59BB27F238928CF00EED3A0 /* PerPixelGloss */,
+				F59BB27E238928CF00EED3A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F59BB27E238928CF00EED3A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F59BB27D238928CF00EED3A0 /* PerPixelGloss.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F59BB27F238928CF00EED3A0 /* PerPixelGloss */ = {
+			isa = PBXGroup;
+			children = (
+				F59BB284238928D100EED3A0 /* Assets.xcassets */,
+				F59BB289238928D100EED3A0 /* Info.plist */,
+				F59BB28A238928D100EED3A0 /* PerPixelGloss.entitlements */,
+			);
+			path = PerPixelGloss;
+			sourceTree = "<group>";
+		};
+		F59BB290238928EF00EED3A0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F59BB2A523892E3C00EED3A0 /* torus_nrms_tc.sbm */,
+				F59BB2A123892DCB00EED3A0 /* pattern1.ktx */,
+				F59BB29D23892C5800EED3A0 /* mountains3d.ktx */,
+				F59BB29A238929B400EED3A0 /* VertexShader.glsl */,
+				F59BB299238929B400EED3A0 /* FragmentShader.glsl */,
+				F59BB280238928CF00EED3A0 /* AppDelegate.swift */,
+				F59BB2912389290100EED3A0 /* main.swift */,
+				F59BB2932389293200EED3A0 /* MainViewController.swift */,
+				F59BB2972389294A00EED3A0 /* GLCoreProfileView.swift */,
+				F59BB29F23892C6A00EED3A0 /* TextureManager.swift */,
+				F59BB2A323892E0B00EED3A0 /* ModelManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F59BB27C238928CF00EED3A0 /* PerPixelGloss */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F59BB28D238928D100EED3A0 /* Build configuration list for PBXNativeTarget "PerPixelGloss" */;
+			buildPhases = (
+				F59BB279238928CF00EED3A0 /* Sources */,
+				F59BB27A238928CF00EED3A0 /* Frameworks */,
+				F59BB27B238928CF00EED3A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerPixelGloss;
+			productName = PerPixelGloss;
+			productReference = F59BB27D238928CF00EED3A0 /* PerPixelGloss.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F59BB275238928CF00EED3A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F59BB27C238928CF00EED3A0 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F59BB278238928CF00EED3A0 /* Build configuration list for PBXProject "PerPixelGloss" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F59BB274238928CF00EED3A0;
+			productRefGroup = F59BB27E238928CF00EED3A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F59BB27C238928CF00EED3A0 /* PerPixelGloss */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F59BB27B238928CF00EED3A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59BB29C238929B400EED3A0 /* VertexShader.glsl in Resources */,
+				F59BB29E23892C5800EED3A0 /* mountains3d.ktx in Resources */,
+				F59BB285238928D100EED3A0 /* Assets.xcassets in Resources */,
+				F59BB2A623892E3C00EED3A0 /* torus_nrms_tc.sbm in Resources */,
+				F59BB29B238929B400EED3A0 /* FragmentShader.glsl in Resources */,
+				F59BB2A223892DCB00EED3A0 /* pattern1.ktx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F59BB279238928CF00EED3A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59BB2942389293200EED3A0 /* MainViewController.swift in Sources */,
+				F59BB2922389290100EED3A0 /* main.swift in Sources */,
+				F59BB2A023892C6A00EED3A0 /* TextureManager.swift in Sources */,
+				F59BB2982389294A00EED3A0 /* GLCoreProfileView.swift in Sources */,
+				F59BB281238928CF00EED3A0 /* AppDelegate.swift in Sources */,
+				F59BB2A423892E0B00EED3A0 /* ModelManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F59BB28B238928D100EED3A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F59BB28C238928D100EED3A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F59BB28E238928D100EED3A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PerPixelGloss/PerPixelGloss.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PerPixelGloss/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.PerPixelGloss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F59BB28F238928D100EED3A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PerPixelGloss/PerPixelGloss.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PerPixelGloss/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.PerPixelGloss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F59BB278238928CF00EED3A0 /* Build configuration list for PBXProject "PerPixelGloss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F59BB28B238928D100EED3A0 /* Debug */,
+				F59BB28C238928D100EED3A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F59BB28D238928D100EED3A0 /* Build configuration list for PBXNativeTarget "PerPixelGloss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F59BB28E238928D100EED3A0 /* Debug */,
+				F59BB28F238928D100EED3A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F59BB275238928CF00EED3A0 /* Project object */;
+}
