@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F557B33B2388D76F008C338E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557B33A2388D76F008C338E /* AppDelegate.swift */; };
+		F557B33F2388D770008C338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F557B33E2388D770008C338E /* Assets.xcassets */; };
+		F557B34C2388D7A0008C338E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557B34B2388D7A0008C338E /* main.swift */; };
+		F557B34E2388D7CA008C338E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557B34D2388D7CA008C338E /* MainViewController.swift */; };
+		F557B3502388D7E5008C338E /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557B34F2388D7E5008C338E /* GLCoreProfileView.swift */; };
+		F557B3552388D83F008C338E /* ModelFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F557B3512388D83F008C338E /* ModelFragmentShader.glsl */; };
+		F557B3562388D83F008C338E /* ModelVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F557B3522388D83F008C338E /* ModelVertexShader.glsl */; };
+		F557B3572388D83F008C338E /* SkyboxVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F557B3532388D83F008C338E /* SkyboxVertexShader.glsl */; };
+		F557B3582388D83F008C338E /* SkyboxFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F557B3542388D83F008C338E /* SkyboxFragmentShader.glsl */; };
+		F557B35A2388DD25008C338E /* mountaincube.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F557B3592388DD25008C338E /* mountaincube.ktx */; };
+		F557B35C2388DD35008C338E /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557B35B2388DD35008C338E /* TextureManager.swift */; };
+		F557B35E238904F8008C338E /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557B35D238904F8008C338E /* ModelManager.swift */; };
+		F557B36023890529008C338E /* dragon.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F557B35F23890529008C338E /* dragon.sbm */; };
+		F557B362238913C4008C338E /* ladybug_co.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F557B361238913C4008C338E /* ladybug_co.ktx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F557B3372388D76F008C338E /* CubeEnvironmentMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeEnvironmentMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F557B33A2388D76F008C338E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F557B33E2388D770008C338E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F557B3432388D771008C338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F557B3442388D771008C338E /* CubeEnvironmentMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CubeEnvironmentMap.entitlements; sourceTree = "<group>"; };
+		F557B34B2388D7A0008C338E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F557B34D2388D7CA008C338E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F557B34F2388D7E5008C338E /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F557B3512388D83F008C338E /* ModelFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ModelFragmentShader.glsl; sourceTree = "<group>"; };
+		F557B3522388D83F008C338E /* ModelVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ModelVertexShader.glsl; sourceTree = "<group>"; };
+		F557B3532388D83F008C338E /* SkyboxVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyboxVertexShader.glsl; sourceTree = "<group>"; };
+		F557B3542388D83F008C338E /* SkyboxFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyboxFragmentShader.glsl; sourceTree = "<group>"; };
+		F557B3592388DD25008C338E /* mountaincube.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = mountaincube.ktx; sourceTree = "<group>"; };
+		F557B35B2388DD35008C338E /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		F557B35D238904F8008C338E /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		F557B35F23890529008C338E /* dragon.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; path = dragon.sbm; sourceTree = "<group>"; };
+		F557B361238913C4008C338E /* ladybug_co.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = ladybug_co.ktx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F557B3342388D76F008C338E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F557B32E2388D76E008C338E = {
+			isa = PBXGroup;
+			children = (
+				F557B34A2388D775008C338E /* Source */,
+				F557B3392388D76F008C338E /* CubeEnvironmentMap */,
+				F557B3382388D76F008C338E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F557B3382388D76F008C338E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F557B3372388D76F008C338E /* CubeEnvironmentMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F557B3392388D76F008C338E /* CubeEnvironmentMap */ = {
+			isa = PBXGroup;
+			children = (
+				F557B33E2388D770008C338E /* Assets.xcassets */,
+				F557B3432388D771008C338E /* Info.plist */,
+				F557B3442388D771008C338E /* CubeEnvironmentMap.entitlements */,
+			);
+			path = CubeEnvironmentMap;
+			sourceTree = "<group>";
+		};
+		F557B34A2388D775008C338E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F557B361238913C4008C338E /* ladybug_co.ktx */,
+				F557B35F23890529008C338E /* dragon.sbm */,
+				F557B3592388DD25008C338E /* mountaincube.ktx */,
+				F557B3532388D83F008C338E /* SkyboxVertexShader.glsl */,
+				F557B3542388D83F008C338E /* SkyboxFragmentShader.glsl */,
+				F557B3522388D83F008C338E /* ModelVertexShader.glsl */,
+				F557B3512388D83F008C338E /* ModelFragmentShader.glsl */,
+				F557B33A2388D76F008C338E /* AppDelegate.swift */,
+				F557B34B2388D7A0008C338E /* main.swift */,
+				F557B34D2388D7CA008C338E /* MainViewController.swift */,
+				F557B34F2388D7E5008C338E /* GLCoreProfileView.swift */,
+				F557B35D238904F8008C338E /* ModelManager.swift */,
+				F557B35B2388DD35008C338E /* TextureManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F557B3362388D76F008C338E /* CubeEnvironmentMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F557B3472388D771008C338E /* Build configuration list for PBXNativeTarget "CubeEnvironmentMap" */;
+			buildPhases = (
+				F557B3332388D76F008C338E /* Sources */,
+				F557B3342388D76F008C338E /* Frameworks */,
+				F557B3352388D76F008C338E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubeEnvironmentMap;
+			productName = CubeEnvironmentMap;
+			productReference = F557B3372388D76F008C338E /* CubeEnvironmentMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F557B32F2388D76E008C338E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F557B3362388D76F008C338E = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F557B3322388D76E008C338E /* Build configuration list for PBXProject "CubeEnvironmentMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F557B32E2388D76E008C338E;
+			productRefGroup = F557B3382388D76F008C338E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F557B3362388D76F008C338E /* CubeEnvironmentMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F557B3352388D76F008C338E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F557B3582388D83F008C338E /* SkyboxFragmentShader.glsl in Resources */,
+				F557B33F2388D770008C338E /* Assets.xcassets in Resources */,
+				F557B3572388D83F008C338E /* SkyboxVertexShader.glsl in Resources */,
+				F557B35A2388DD25008C338E /* mountaincube.ktx in Resources */,
+				F557B362238913C4008C338E /* ladybug_co.ktx in Resources */,
+				F557B3562388D83F008C338E /* ModelVertexShader.glsl in Resources */,
+				F557B36023890529008C338E /* dragon.sbm in Resources */,
+				F557B3552388D83F008C338E /* ModelFragmentShader.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F557B3332388D76F008C338E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F557B34E2388D7CA008C338E /* MainViewController.swift in Sources */,
+				F557B34C2388D7A0008C338E /* main.swift in Sources */,
+				F557B35C2388DD35008C338E /* TextureManager.swift in Sources */,
+				F557B3502388D7E5008C338E /* GLCoreProfileView.swift in Sources */,
+				F557B33B2388D76F008C338E /* AppDelegate.swift in Sources */,
+				F557B35E238904F8008C338E /* ModelManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F557B3452388D771008C338E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F557B3462388D771008C338E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F557B3482388D771008C338E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CubeEnvironmentMap/CubeEnvironmentMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CubeEnvironmentMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.CubeEnvironmentMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F557B3492388D771008C338E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CubeEnvironmentMap/CubeEnvironmentMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CubeEnvironmentMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.CubeEnvironmentMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F557B3322388D76E008C338E /* Build configuration list for PBXProject "CubeEnvironmentMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F557B3452388D771008C338E /* Debug */,
+				F557B3462388D771008C338E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F557B3472388D771008C338E /* Build configuration list for PBXNativeTarget "CubeEnvironmentMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F557B3482388D771008C338E /* Debug */,
+				F557B3492388D771008C338E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F557B32F2388D76E008C338E /* Project object */;
+}
