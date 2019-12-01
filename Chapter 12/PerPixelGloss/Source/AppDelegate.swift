@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let windowRect = NSRect(x: 0, y: screenFrame.size.width / 2, width: screenFrame.size.width / 2, height: screenFrame.size.height / 2)
         let style: NSWindow.StyleMask = [NSWindow.StyleMask.titled, NSWindow.StyleMask.closable, NSWindow.StyleMask.miniaturizable, NSWindow.StyleMask.resizable]
         self.mainWindow = NSWindow(contentRect: windowRect, styleMask: style, backing: .buffered, defer: false)
-        self.mainWindow?.title = "EquiRetangular"
+        self.mainWindow?.title = "PerPixelGloss"
         self.mainWindow?.makeKeyAndOrderFront(nil)
         
         self.mainViewController = MainViewController()
