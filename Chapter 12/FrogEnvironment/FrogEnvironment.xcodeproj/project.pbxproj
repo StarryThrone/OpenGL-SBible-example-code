@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5E95EC32393B7C5004D8A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E95EC22393B7C5004D8A8D /* AppDelegate.swift */; };
+		F5E95EC72393B7C6004D8A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EC62393B7C6004D8A8D /* Assets.xcassets */; };
+		F5E95ED52393B7FB004D8A8D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E95ED42393B7FB004D8A8D /* main.swift */; };
+		F5E95ED72393B824004D8A8D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E95ED62393B824004D8A8D /* MainViewController.swift */; };
+		F5E95ED92393B83A004D8A8D /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E95ED82393B83A004D8A8D /* GLCoreProfileView.swift */; };
+		F5E95EF82393BA93004D8A8D /* TesselationControlShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EF42393BA93004D8A8D /* TesselationControlShader.glsl */; };
+		F5E95EF92393BA93004D8A8D /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EF52393BA93004D8A8D /* FragmentShader.glsl */; };
+		F5E95EFA2393BA93004D8A8D /* TesselationEvaluateShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EF62393BA93004D8A8D /* TesselationEvaluateShader.glsl */; };
+		F5E95EFB2393BA93004D8A8D /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EF72393BA93004D8A8D /* VertexShader.glsl */; };
+		F5E95EFD2393C0BF004D8A8D /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E95EFC2393C0BF004D8A8D /* TextureManager.swift */; };
+		F5E95F0023953590004D8A8D /* terragen_color.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EFE23953590004D8A8D /* terragen_color.ktx */; };
+		F5E95F0123953590004D8A8D /* terragen1.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F5E95EFF23953590004D8A8D /* terragen1.ktx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5E95EBF2393B7C5004D8A8D /* FrogEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrogEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E95EC22393B7C5004D8A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5E95EC62393B7C6004D8A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5E95ECB2393B7C6004D8A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E95ECC2393B7C6004D8A8D /* FrogEnvironment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FrogEnvironment.entitlements; sourceTree = "<group>"; };
+		F5E95ED42393B7FB004D8A8D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F5E95ED62393B824004D8A8D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F5E95ED82393B83A004D8A8D /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F5E95EF42393BA93004D8A8D /* TesselationControlShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TesselationControlShader.glsl; sourceTree = "<group>"; };
+		F5E95EF52393BA93004D8A8D /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		F5E95EF62393BA93004D8A8D /* TesselationEvaluateShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TesselationEvaluateShader.glsl; sourceTree = "<group>"; };
+		F5E95EF72393BA93004D8A8D /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		F5E95EFC2393C0BF004D8A8D /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		F5E95EFE23953590004D8A8D /* terragen_color.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = terragen_color.ktx; path = ../../../MediaResources/Textures/terragen_color.ktx; sourceTree = "<group>"; };
+		F5E95EFF23953590004D8A8D /* terragen1.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = terragen1.ktx; path = ../../../MediaResources/Textures/terragen1.ktx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5E95EBC2393B7C5004D8A8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5E95EB62393B7C5004D8A8D = {
+			isa = PBXGroup;
+			children = (
+				F5E95ED32393B7EA004D8A8D /* Resource */,
+				F5E95ED22393B7E1004D8A8D /* Source */,
+				F5E95EC12393B7C5004D8A8D /* FrogEnvironment */,
+				F5E95EC02393B7C5004D8A8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5E95EC02393B7C5004D8A8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5E95EBF2393B7C5004D8A8D /* FrogEnvironment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5E95EC12393B7C5004D8A8D /* FrogEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				F5E95EC62393B7C6004D8A8D /* Assets.xcassets */,
+				F5E95ECB2393B7C6004D8A8D /* Info.plist */,
+				F5E95ECC2393B7C6004D8A8D /* FrogEnvironment.entitlements */,
+			);
+			path = FrogEnvironment;
+			sourceTree = "<group>";
+		};
+		F5E95ED22393B7E1004D8A8D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F5E95EC22393B7C5004D8A8D /* AppDelegate.swift */,
+				F5E95ED42393B7FB004D8A8D /* main.swift */,
+				F5E95ED62393B824004D8A8D /* MainViewController.swift */,
+				F5E95ED82393B83A004D8A8D /* GLCoreProfileView.swift */,
+				F5E95EFC2393C0BF004D8A8D /* TextureManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F5E95ED32393B7EA004D8A8D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F5E95EFE23953590004D8A8D /* terragen_color.ktx */,
+				F5E95EFF23953590004D8A8D /* terragen1.ktx */,
+				F5E95EF72393BA93004D8A8D /* VertexShader.glsl */,
+				F5E95EF42393BA93004D8A8D /* TesselationControlShader.glsl */,
+				F5E95EF62393BA93004D8A8D /* TesselationEvaluateShader.glsl */,
+				F5E95EF52393BA93004D8A8D /* FragmentShader.glsl */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5E95EBE2393B7C5004D8A8D /* FrogEnvironment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5E95ECF2393B7C6004D8A8D /* Build configuration list for PBXNativeTarget "FrogEnvironment" */;
+			buildPhases = (
+				F5E95EBB2393B7C5004D8A8D /* Sources */,
+				F5E95EBC2393B7C5004D8A8D /* Frameworks */,
+				F5E95EBD2393B7C5004D8A8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrogEnvironment;
+			productName = FrogEnvironment;
+			productReference = F5E95EBF2393B7C5004D8A8D /* FrogEnvironment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5E95EB72393B7C5004D8A8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F5E95EBE2393B7C5004D8A8D = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = F5E95EBA2393B7C5004D8A8D /* Build configuration list for PBXProject "FrogEnvironment" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5E95EB62393B7C5004D8A8D;
+			productRefGroup = F5E95EC02393B7C5004D8A8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5E95EBE2393B7C5004D8A8D /* FrogEnvironment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5E95EBD2393B7C5004D8A8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E95EF82393BA93004D8A8D /* TesselationControlShader.glsl in Resources */,
+				F5E95F0023953590004D8A8D /* terragen_color.ktx in Resources */,
+				F5E95F0123953590004D8A8D /* terragen1.ktx in Resources */,
+				F5E95EF92393BA93004D8A8D /* FragmentShader.glsl in Resources */,
+				F5E95EFB2393BA93004D8A8D /* VertexShader.glsl in Resources */,
+				F5E95EC72393B7C6004D8A8D /* Assets.xcassets in Resources */,
+				F5E95EFA2393BA93004D8A8D /* TesselationEvaluateShader.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5E95EBB2393B7C5004D8A8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E95ED72393B824004D8A8D /* MainViewController.swift in Sources */,
+				F5E95ED52393B7FB004D8A8D /* main.swift in Sources */,
+				F5E95EFD2393C0BF004D8A8D /* TextureManager.swift in Sources */,
+				F5E95ED92393B83A004D8A8D /* GLCoreProfileView.swift in Sources */,
+				F5E95EC32393B7C5004D8A8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5E95ECD2393B7C6004D8A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5E95ECE2393B7C6004D8A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5E95ED02393B7C6004D8A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FrogEnvironment/FrogEnvironment.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = FrogEnvironment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.FrogEnvironment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5E95ED12393B7C6004D8A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FrogEnvironment/FrogEnvironment.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = FrogEnvironment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.FrogEnvironment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5E95EBA2393B7C5004D8A8D /* Build configuration list for PBXProject "FrogEnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E95ECD2393B7C6004D8A8D /* Debug */,
+				F5E95ECE2393B7C6004D8A8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5E95ECF2393B7C6004D8A8D /* Build configuration list for PBXNativeTarget "FrogEnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E95ED02393B7C6004D8A8D /* Debug */,
+				F5E95ED12393B7C6004D8A8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5E95EB72393B7C5004D8A8D /* Project object */;
+}
