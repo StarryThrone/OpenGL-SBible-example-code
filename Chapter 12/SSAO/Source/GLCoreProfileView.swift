@@ -214,7 +214,10 @@ class GLCoreProfileView: NSOpenGLView {
             repeat {
                 let vectorX = Float.random(in: -1...1)
                 let vectorY = Float.random(in: -1...1)
-                let vectorZ = Float.random(in: -1...1)
+                // 为了绘图方便，舍弃z轴负半轴向量，此时得到文章中的图
+                // 如果需要观察真是效果，请解开该行代码注释
+//                let vectorZ = Float.random(in: -1...1)
+                let vectorZ = Float.random(in: 0...1)
                 vector = SIMD4(vectorX, vectorY, vectorZ, 0)
             } while (length(vector) > 1)
             vector = normalize(vector)
