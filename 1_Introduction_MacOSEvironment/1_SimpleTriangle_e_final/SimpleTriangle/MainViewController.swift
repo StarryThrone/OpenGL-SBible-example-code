@@ -35,10 +35,10 @@ class MainViewController: GLKViewController {
 
     //MARK: - Override
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
-        glClearColor(0, 0, 0, 1)
-        glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
+        var defaultColor: [GLfloat] = [0, 0, 0, 1]
+        glClearBufferfv(GLenum(GL_COLOR), 0, &defaultColor)
         
-        glUseProgram(glProgram)
+        glUseProgram(self.glProgram)
         let duration = Float(self.framesDisplayed) / Float(self.preferredFramesPerSecond)
         let radiansPerSecond = duration * Float.pi * 0.5
         var offsetAttributes = [GLfloat](arrayLiteral: sinf(radiansPerSecond) * 0.5, cosf(radiansPerSecond) * 0.5, 0.0, 0.0)
@@ -53,15 +53,14 @@ class MainViewController: GLKViewController {
     
     //MARK: - Private Methods
     fileprivate func setupOpenGLContext() -> Bool {
-        context = EAGLContext(api: EAGLRenderingAPI.openGLES3)
-        if self.context == nil {
+        guard let context = EAGLContext(api: EAGLRenderingAPI.openGLES3) else {
             print("Failed to intialize opengl es context")
             return false
         }
         
         EAGLContext.setCurrent(context)
         let view = self.view as! GLKView
-        view.context = context!
+        view.context = context
         view.drawableColorFormat = GLKViewDrawableColorFormat.RGBA8888
         return true
     }
@@ -72,8 +71,8 @@ class MainViewController: GLKViewController {
             return false
         }
         
-        glGenVertexArraysOES(1, &vbo)
-        glBindVertexArrayOES(vbo)
+        glGenVertexArrays(1, &self.vbo)
+        glBindVertexArray(self.vbo)
         
         return true
     }
