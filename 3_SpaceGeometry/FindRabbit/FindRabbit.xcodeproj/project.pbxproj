@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5A1E8E223B99D7E00CF0B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1E8E123B99D7E00CF0B3D /* AppDelegate.swift */; };
+		F5A1E8E623B99D8000CF0B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A1E8E523B99D8000CF0B3D /* Assets.xcassets */; };
+		F5A1E8F423B99DD900CF0B3D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1E8F323B99DD900CF0B3D /* main.swift */; };
+		F5A1E8F623B99E0300CF0B3D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1E8F523B99E0300CF0B3D /* MainViewController.swift */; };
+		F5A1E8F823B99E1A00CF0B3D /* GLCoreProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1E8F723B99E1A00CF0B3D /* GLCoreProfileView.swift */; };
+		F5A1E8FA23B99E6A00CF0B3D /* MapVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5A1E8F923B99E6A00CF0B3D /* MapVertexShader.glsl */; };
+		F5A1E8FC23B99E7600CF0B3D /* MapFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5A1E8FB23B99E7600CF0B3D /* MapFragmentShader.glsl */; };
+		F5E4880E23B9EB970023A108 /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4880D23B9EB970023A108 /* TextureManager.swift */; };
+		F5E4881023B9ECAB0023A108 /* floor.ktx in Resources */ = {isa = PBXBuildFile; fileRef = F5E4880F23B9ECAB0023A108 /* floor.ktx */; };
+		F5E4881223B9FE890023A108 /* bunny_1k.sbm in Resources */ = {isa = PBXBuildFile; fileRef = F5E4881123B9FE890023A108 /* bunny_1k.sbm */; };
+		F5E4881423B9FECC0023A108 /* RabbitVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E4881323B9FECC0023A108 /* RabbitVertexShader.glsl */; };
+		F5E4881623B9FEDD0023A108 /* RabbitFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F5E4881523B9FEDD0023A108 /* RabbitFragmentShader.glsl */; };
+		F5E4881823B9FF590023A108 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4881723B9FF590023A108 /* ModelManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5A1E8DE23B99D7E00CF0B3D /* FindRabbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindRabbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A1E8E123B99D7E00CF0B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5A1E8E523B99D8000CF0B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5A1E8EA23B99D8000CF0B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A1E8EB23B99D8000CF0B3D /* FindRabbit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindRabbit.entitlements; sourceTree = "<group>"; };
+		F5A1E8F323B99DD900CF0B3D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F5A1E8F523B99E0300CF0B3D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F5A1E8F723B99E1A00CF0B3D /* GLCoreProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLCoreProfileView.swift; sourceTree = "<group>"; };
+		F5A1E8F923B99E6A00CF0B3D /* MapVertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = MapVertexShader.glsl; sourceTree = "<group>"; };
+		F5A1E8FB23B99E7600CF0B3D /* MapFragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = MapFragmentShader.glsl; sourceTree = "<group>"; };
+		F5E4880D23B9EB970023A108 /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		F5E4880F23B9ECAB0023A108 /* floor.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = floor.ktx; path = ../../../MediaResources/Textures/floor.ktx; sourceTree = "<group>"; };
+		F5E4881123B9FE890023A108 /* bunny_1k.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; name = bunny_1k.sbm; path = "../../../Chapter 9/9.3-depthclamp/ConfigureEnvironment/bunny_1k.sbm"; sourceTree = "<group>"; };
+		F5E4881323B9FECC0023A108 /* RabbitVertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = RabbitVertexShader.glsl; sourceTree = "<group>"; };
+		F5E4881523B9FEDD0023A108 /* RabbitFragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = RabbitFragmentShader.glsl; sourceTree = "<group>"; };
+		F5E4881723B9FF590023A108 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5A1E8DB23B99D7E00CF0B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5A1E8D523B99D7D00CF0B3D = {
+			isa = PBXGroup;
+			children = (
+				F5A1E8F223B99DB800CF0B3D /* Resource */,
+				F5A1E8F123B99DA600CF0B3D /* Source */,
+				F5A1E8E023B99D7E00CF0B3D /* FindRabbit */,
+				F5A1E8DF23B99D7E00CF0B3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5A1E8DF23B99D7E00CF0B3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5A1E8DE23B99D7E00CF0B3D /* FindRabbit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5A1E8E023B99D7E00CF0B3D /* FindRabbit */ = {
+			isa = PBXGroup;
+			children = (
+				F5A1E8E523B99D8000CF0B3D /* Assets.xcassets */,
+				F5A1E8EA23B99D8000CF0B3D /* Info.plist */,
+				F5A1E8EB23B99D8000CF0B3D /* FindRabbit.entitlements */,
+			);
+			path = FindRabbit;
+			sourceTree = "<group>";
+		};
+		F5A1E8F123B99DA600CF0B3D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F5A1E8E123B99D7E00CF0B3D /* AppDelegate.swift */,
+				F5A1E8F323B99DD900CF0B3D /* main.swift */,
+				F5A1E8F523B99E0300CF0B3D /* MainViewController.swift */,
+				F5A1E8F723B99E1A00CF0B3D /* GLCoreProfileView.swift */,
+				F5E4880D23B9EB970023A108 /* TextureManager.swift */,
+				F5E4881723B9FF590023A108 /* ModelManager.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F5A1E8F223B99DB800CF0B3D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F5E4881123B9FE890023A108 /* bunny_1k.sbm */,
+				F5E4880F23B9ECAB0023A108 /* floor.ktx */,
+				F5A1E8F923B99E6A00CF0B3D /* MapVertexShader.glsl */,
+				F5A1E8FB23B99E7600CF0B3D /* MapFragmentShader.glsl */,
+				F5E4881323B9FECC0023A108 /* RabbitVertexShader.glsl */,
+				F5E4881523B9FEDD0023A108 /* RabbitFragmentShader.glsl */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5A1E8DD23B99D7E00CF0B3D /* FindRabbit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A1E8EE23B99D8000CF0B3D /* Build configuration list for PBXNativeTarget "FindRabbit" */;
+			buildPhases = (
+				F5A1E8DA23B99D7E00CF0B3D /* Sources */,
+				F5A1E8DB23B99D7E00CF0B3D /* Frameworks */,
+				F5A1E8DC23B99D7E00CF0B3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindRabbit;
+			productName = FindRabbit;
+			productReference = F5A1E8DE23B99D7E00CF0B3D /* FindRabbit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5A1E8D623B99D7D00CF0B3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = chenjie;
+				TargetAttributes = {
+					F5A1E8DD23B99D7E00CF0B3D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = F5A1E8D923B99D7D00CF0B3D /* Build configuration list for PBXProject "FindRabbit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5A1E8D523B99D7D00CF0B3D;
+			productRefGroup = F5A1E8DF23B99D7E00CF0B3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5A1E8DD23B99D7E00CF0B3D /* FindRabbit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5A1E8DC23B99D7E00CF0B3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E4881023B9ECAB0023A108 /* floor.ktx in Resources */,
+				F5A1E8FA23B99E6A00CF0B3D /* MapVertexShader.glsl in Resources */,
+				F5E4881223B9FE890023A108 /* bunny_1k.sbm in Resources */,
+				F5A1E8FC23B99E7600CF0B3D /* MapFragmentShader.glsl in Resources */,
+				F5E4881423B9FECC0023A108 /* RabbitVertexShader.glsl in Resources */,
+				F5A1E8E623B99D8000CF0B3D /* Assets.xcassets in Resources */,
+				F5E4881623B9FEDD0023A108 /* RabbitFragmentShader.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5A1E8DA23B99D7E00CF0B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A1E8F623B99E0300CF0B3D /* MainViewController.swift in Sources */,
+				F5A1E8F423B99DD900CF0B3D /* main.swift in Sources */,
+				F5E4880E23B9EB970023A108 /* TextureManager.swift in Sources */,
+				F5A1E8F823B99E1A00CF0B3D /* GLCoreProfileView.swift in Sources */,
+				F5A1E8E223B99D7E00CF0B3D /* AppDelegate.swift in Sources */,
+				F5E4881823B9FF590023A108 /* ModelManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5A1E8EC23B99D8000CF0B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5A1E8ED23B99D8000CF0B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5A1E8EF23B99D8000CF0B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FindRabbit/FindRabbit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = FindRabbit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.FindRabbit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5A1E8F023B99D8000CF0B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FindRabbit/FindRabbit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HABU2A8ZM2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = FindRabbit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardjiechen.FindRabbit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5A1E8D923B99D7D00CF0B3D /* Build configuration list for PBXProject "FindRabbit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A1E8EC23B99D8000CF0B3D /* Debug */,
+				F5A1E8ED23B99D8000CF0B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A1E8EE23B99D8000CF0B3D /* Build configuration list for PBXNativeTarget "FindRabbit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A1E8EF23B99D8000CF0B3D /* Debug */,
+				F5A1E8F023B99D8000CF0B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5A1E8D623B99D7D00CF0B3D /* Project object */;
+}
