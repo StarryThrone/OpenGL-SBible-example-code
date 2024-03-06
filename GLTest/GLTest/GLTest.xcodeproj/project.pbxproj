@@ -13,9 +13,11 @@
 		2B85E3CF2B973E7300389E96 /* GLTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85E3CE2B973E7300389E96 /* GLTestUITests.swift */; };
 		2B85E3D12B973E7300389E96 /* GLTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85E3D02B973E7300389E96 /* GLTestUITestsLaunchTests.swift */; };
 		2B85E3DE2B973EB000389E96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85E3DD2B973EB000389E96 /* MainViewController.swift */; };
-		2B85E3E02B973FD300389E96 /* vs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2B85E3DF2B973FD300389E96 /* vs.glsl */; };
-		2B85E3E22B973FF100389E96 /* fs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2B85E3E12B973FF100389E96 /* fs.glsl */; };
+		2B85E3E02B973FD300389E96 /* vs_es2.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2B85E3DF2B973FD300389E96 /* vs_es2.glsl */; };
+		2B85E3E22B973FF100389E96 /* fs_es3.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2B85E3E12B973FF100389E96 /* fs_es3.glsl */; };
 		2B89FD0E2B97461A007CAD98 /* TextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89FD0D2B97461A007CAD98 /* TextureManager.swift */; };
+		2B89FD122B985052007CAD98 /* vs_es3.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2B89FD112B985052007CAD98 /* vs_es3.glsl */; };
+		2B89FD142B9850DA007CAD98 /* fs_es2.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2B89FD132B9850DA007CAD98 /* fs_es2.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +48,11 @@
 		2B85E3CE2B973E7300389E96 /* GLTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTestUITests.swift; sourceTree = "<group>"; };
 		2B85E3D02B973E7300389E96 /* GLTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2B85E3DD2B973EB000389E96 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		2B85E3DF2B973FD300389E96 /* vs.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vs.glsl; sourceTree = "<group>"; };
-		2B85E3E12B973FF100389E96 /* fs.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fs.glsl; sourceTree = "<group>"; };
+		2B85E3DF2B973FD300389E96 /* vs_es2.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vs_es2.glsl; sourceTree = "<group>"; };
+		2B85E3E12B973FF100389E96 /* fs_es3.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fs_es3.glsl; sourceTree = "<group>"; };
 		2B89FD0D2B97461A007CAD98 /* TextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureManager.swift; sourceTree = "<group>"; };
+		2B89FD112B985052007CAD98 /* vs_es3.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vs_es3.glsl; sourceTree = "<group>"; };
+		2B89FD132B9850DA007CAD98 /* fs_es2.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fs_es2.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 				2B89FD0D2B97461A007CAD98 /* TextureManager.swift */,
 				2B85E3B62B973E7300389E96 /* Assets.xcassets */,
 				2B85E3BB2B973E7300389E96 /* Info.plist */,
-				2B85E3DF2B973FD300389E96 /* vs.glsl */,
-				2B85E3E12B973FF100389E96 /* fs.glsl */,
+				2B85E3DF2B973FD300389E96 /* vs_es2.glsl */,
+				2B89FD112B985052007CAD98 /* vs_es3.glsl */,
+				2B89FD132B9850DA007CAD98 /* fs_es2.glsl */,
+				2B85E3E12B973FF100389E96 /* fs_es3.glsl */,
 			);
 			path = GLTest;
 			sourceTree = "<group>";
@@ -231,8 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B85E3E22B973FF100389E96 /* fs.glsl in Resources */,
-				2B85E3E02B973FD300389E96 /* vs.glsl in Resources */,
+				2B85E3E22B973FF100389E96 /* fs_es3.glsl in Resources */,
+				2B89FD142B9850DA007CAD98 /* fs_es2.glsl in Resources */,
+				2B89FD122B985052007CAD98 /* vs_es3.glsl in Resources */,
+				2B85E3E02B973FD300389E96 /* vs_es2.glsl in Resources */,
 				2B85E3B72B973E7300389E96 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

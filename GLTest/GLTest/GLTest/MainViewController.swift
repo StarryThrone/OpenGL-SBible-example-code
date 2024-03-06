@@ -8,10 +8,20 @@
 import UIKit
 import GLKit
 
+let vertextAttributes: [GLfloat] = [-1.0, 1.0, 0.0, 1.0, 0.0, 0.0,
+                                   -1.0, -1.0, 0.0, 0.0, 1.0, 0.0,
+                                   1.0, -1.0, 0.0, 0.0, 0.0, 1.0]
+
 class MainViewController: GLKViewController {
     fileprivate var context: EAGLContext?
-    fileprivate var glProgram: GLuint = 0
+    
     fileprivate var vbo: GLuint = 0
+    fileprivate var vertexBuffer: GLuint = 0
+
+    fileprivate var glProgram: GLuint = 0
+    fileprivate var positionLocation: GLint = 0
+    fileprivate var colorLocation: GLint = 0
+    fileprivate var offsetLocation: GLint = 0
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -34,17 +44,16 @@ class MainViewController: GLKViewController {
 
     //MARK: - Override
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
-        var defaultColor: [GLfloat] = [0, 0, 0, 1]
-        glClearBufferfv(GLenum(GL_COLOR), 0, &defaultColor)
+        glClearColor(0.0, 0.0, 0.0, 1.0)
+        glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
         
         glUseProgram(self.glProgram)
         let duration = Float(self.framesDisplayed) / Float(self.preferredFramesPerSecond)
         let radiansPerSecond = duration * Float.pi * 0.5
         var offsetAttributes = [GLfloat](arrayLiteral: sinf(radiansPerSecond) * 0.5, cosf(radiansPerSecond) * 0.5, 0.0, 0.0)
-        glVertexAttrib4fv(0, &offsetAttributes)
-        
-        var triangleColor = [GLfloat](arrayLiteral: 1, 1, 0, 1)
-        glVertexAttrib4fv(1, &triangleColor)
+
+        offsetLocation = glGetAttribLocation(glProgram, "offset")
+        glVertexAttrib4fv(GLuint(offsetLocation), &offsetAttributes)
         
         glDrawArrays(GLenum(GL_TRIANGLES), 0, 3)
         glFlush()
@@ -52,7 +61,7 @@ class MainViewController: GLKViewController {
     
     //MARK: - Private Methods
     fileprivate func setupOpenGLContext() -> Bool {
-        guard let context = EAGLContext(api: EAGLRenderingAPI.openGLES3) else {
+        guard let context = EAGLContext(api: EAGLRenderingAPI.openGLES2) else {
             print("Failed to intialize opengl es context")
             return false
         }
@@ -65,6 +74,11 @@ class MainViewController: GLKViewController {
     }
     
     fileprivate func setupOpenGLInfrastructure() -> Bool {
+        func bufferOffset(_ i: Int) -> UnsafeRawPointer? {
+            return UnsafeRawPointer(bitPattern: i)
+        }
+        
+        
         let shaderLoaded = loadShaders()
         if !shaderLoaded {
             return false
@@ -73,14 +87,34 @@ class MainViewController: GLKViewController {
         glGenVertexArrays(1, &self.vbo)
         glBindVertexArray(self.vbo)
         
+        glGenBuffers(1, &vertexBuffer)
+        glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
+        let dataSize = MemoryLayout<GLfloat>.stride * vertextAttributes.count
+        vertextAttributes.withUnsafeBufferPointer { buffer in
+            if let baseAddress = buffer.baseAddress {
+                let rawPointer = UnsafeRawPointer(baseAddress)
+                glBufferData(GLenum(GL_ARRAY_BUFFER), dataSize, rawPointer, GLenum(GL_STATIC_DRAW))
+            }
+        }
+        
+        positionLocation = glGetAttribLocation(glProgram, "position")
+        glEnableVertexAttribArray(GLuint(positionLocation))
+        glVertexAttribPointer(GLuint(positionLocation), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 
+                              Int32(MemoryLayout<GLfloat>.stride) * 6, bufferOffset(0))
+        
+        colorLocation = glGetAttribLocation(glProgram, "color")
+        glEnableVertexAttribArray(GLuint(colorLocation))
+        glVertexAttribPointer(GLuint(colorLocation), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 
+                              Int32(MemoryLayout<GLfloat>.stride) * 6, bufferOffset(MemoryLayout<GLfloat>.stride * 3))
+        
         return true
     }
     
     fileprivate func loadShaders() -> Bool {
         var vertexShader: GLuint = 0
-        let vertexShaderFileName = "vs"
+        let vertexShaderFileName = "vs_es2"
         var fragmentShader: GLuint = 0
-        let fragmentShaderFileName = "fs"
+        let fragmentShaderFileName = "fs_es2"
         
         glProgram = glCreateProgram()
         guard let vertexShaderFilePath = Bundle.main.path(forResource: vertexShaderFileName, ofType: "glsl") else { return false }
