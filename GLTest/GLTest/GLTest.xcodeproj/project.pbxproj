@@ -109,8 +109,8 @@
 				2B85E3B62B973E7300389E96 /* Assets.xcassets */,
 				2B85E3BB2B973E7300389E96 /* Info.plist */,
 				2B85E3DF2B973FD300389E96 /* vs_es2.glsl */,
-				2B89FD112B985052007CAD98 /* vs_es3.glsl */,
 				2B89FD132B9850DA007CAD98 /* fs_es2.glsl */,
+				2B89FD112B985052007CAD98 /* vs_es3.glsl */,
 				2B85E3E12B973FF100389E96 /* fs_es3.glsl */,
 			);
 			path = GLTest;
